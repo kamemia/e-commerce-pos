@@ -14,17 +14,20 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   google_fonts: ^3.0.1
-  get: ^4.6.5
   flutter_native_splash: ^2.2.16
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
 
+
 flutter_native_splash:
   color: "#f7f6f1"
   dark_color: "#272727"
+  image: assets/images/splash.png
+  dark_image: assets/images/splash.png
 
 
 flutter:
