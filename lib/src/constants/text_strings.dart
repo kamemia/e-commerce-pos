@@ -1,6 +1,6 @@
 // App Text Strings
 const String tLogin = "Login";
-const String tSignup = "Signup";
+const String tSignup = "Sign up";
 
 const String tAppName = "Ecommerce";
 const String tAppTagLine =
@@ -21,6 +21,6 @@ const String tOnBoardingCounter2 = "2/3";
 const String tOnBoardingCounter3 = "3/3";
 
 // Welcome Screen Text
-const String tWelcomeTitle = "BuildAwesomeApps";
+const String tWelcomeTitle = "Build Awesome Apps";
 const String tWelcomeSubTitle =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
