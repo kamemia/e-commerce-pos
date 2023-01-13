@@ -17,11 +17,11 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: isDarkMode ? tSecondaryColor : tPrimaryColor,
       body: Container(
-        padding: EdgeInsets.all(tDefaultSize),
+        padding: const EdgeInsets.all(tDefaultSize),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Image(image: AssetImage(tWelcomeScreenImage), height: height * 0.6),
+            Image(image: const AssetImage(tWelcomeScreenImage), height: height * 0.6),
             Column(
               children: [
                 Text(

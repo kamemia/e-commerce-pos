@@ -23,7 +23,7 @@ class SplashScreen extends StatelessWidget {
             duration: const Duration(milliseconds: 1600),
             top: splashController.animate.value ? 0: -30,
             left: splashController.animate.value ? 0: -30,
-            child: Image(
+            child: const Image(
               image: AssetImage(tSplashTopIcon),
             ),
           ),
@@ -55,7 +55,7 @@ class SplashScreen extends StatelessWidget {
             child: AnimatedOpacity(
               duration: const Duration(milliseconds: 2000),
               opacity: splashController.animate.value ? 1 : 0,
-              child: Image(image: AssetImage(tSplashImage)),
+              child: const Image(image: AssetImage(tSplashImage)),
               ),
           ),
           AnimatedPositioned(
