@@ -35,10 +35,12 @@ const String tEmailHint = "abc@mail.com";
 const String tPassword = "Password";
 const String tForgetPassword = "Forget Password?";
 const String tSignInWithGoogle = "Sign in with Google";
-const String tDontHaveAnAccount = "Don't have an Account?";
+const String tDontHaveAnAccount = "Don't have an Account? ";
 
 // Sign up Screen Text
 const String tSignupTitle = "Get on Board";
 const String tSignUpSubTitle =
     "Create your profiel to start your Journey with us...";
 const String tAlreadyHaveAnAccount = "Already have an Account? ";
+const String tFullName = "Full Name";
+const String tPhoneNo = "Phone Number";

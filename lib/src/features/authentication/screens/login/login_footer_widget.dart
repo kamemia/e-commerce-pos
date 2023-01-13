@@ -26,14 +26,11 @@ class LoginFooterWidget extends StatelessWidget {
         const SizedBox(height: tFormHeight -20,),
         TextButton(
           onPressed: (){}, 
-          child: const Text.rich(
+          child: Text.rich(
             TextSpan(
-              text: tDontHaveAnAccount,
-              //style: Theme.of(context).textTheme.bodyText1,
               children: [
-                TextSpan(
-                  text: tSignup,
-                  style: TextStyle(color: Colors.blue),
+              TextSpan(text: tDontHaveAnAccount, style: Theme.of(context).textTheme.bodyText1,),
+              const TextSpan(text: tSignup, style: TextStyle(color: Colors.blue),
                 ),
               ]
             ),

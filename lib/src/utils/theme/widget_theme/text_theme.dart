@@ -12,6 +12,10 @@ class TTextTheme {
       color: Colors.black54,
       fontSize: 24,
     ),
+    bodyText1: GoogleFonts.montserrat(
+      color: Colors.black26,
+      fontSize: 18,
+    ),
   );
   static TextTheme darkTextTheme = TextTheme(
     headline2: GoogleFonts.montserrat(
@@ -20,6 +24,10 @@ class TTextTheme {
     subtitle2: GoogleFonts.poppins(
       color: Colors.white60,
       fontSize: 26,
+    ),
+    bodyText1: GoogleFonts.montserrat(
+      color: Colors.white54,
+      fontSize: 18,
     ),
   );
 }
