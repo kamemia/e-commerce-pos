@@ -1,5 +1,3 @@
-import 'package:commerce/src/constants/image_strings.dart';
-import 'package:commerce/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
 class FormHeaderWidget extends StatelessWidget {

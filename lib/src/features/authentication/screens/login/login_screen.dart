@@ -1,6 +1,4 @@
-import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';
-import 'package:commerce/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
 import 'login_footer_widget.dart';
