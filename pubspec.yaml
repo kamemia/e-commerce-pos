@@ -34,10 +34,14 @@ flutter:
 
   uses-material-design: true
   assets:
+    - assets/logo/
     - assets/images/
     - assets/images/splash_images/
     - assets/images/on_boarding_images/
     - assets/images/welcome_images/
+    - assets/images/dashboard/
+    - assets/images/forget_password/
+
 
 
 
