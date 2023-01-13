@@ -30,10 +30,15 @@ const String tLoginTitle = "Welcome Back, ";
 const String tLoginSubTitle =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
 const String tRememberMe = "Remember Me?";
-const String tAlreadyHaveAnAccount = "Already have an Account?";
 const String tEmail = "E- Mail";
 const String tEmailHint = "abc@mail.com";
 const String tPassword = "Password";
 const String tForgetPassword = "Forget Password?";
 const String tSignInWithGoogle = "Sign in with Google";
 const String tDontHaveAnAccount = "Don't have an Account?";
+
+// Sign up Screen Text
+const String tSignupTitle = "Get on Board";
+const String tSignUpSubTitle =
+    "Create your profiel to start your Journey with us...";
+const String tAlreadyHaveAnAccount = "Already have an Account? ";
