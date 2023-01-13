@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
 
 class FormHeaderWidget extends StatelessWidget {
-  const FormHeaderWidget({Key? key, 
-  required this.image,
-  required this.title,
-  required this.subTitle,
+  const FormHeaderWidget({
+    Key? key,
+    this.imageColor,
+    this.heightBetween,
+    required this.image,
+    required this.title,
+    required this.subTitle,
+    this.imageHeight = 0.2,
+    this.crossAxisAlignment = CrossAxisAlignment.start,
   }) : super(key: key);
 
-  final String image,title,subTitle;
+  final Color? imageColor;
+  final double imageHeight;
+  final double? heightBetween;
+  final String image, title, subTitle;
+  final CrossAxisAlignment crossAxisAlignment;
 
   @override
   Widget build(BuildContext context) {
