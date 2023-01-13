@@ -3,6 +3,8 @@ import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
+import 'login_form_widget.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -29,46 +31,7 @@ class LoginScreen extends StatelessWidget {
               ),
 
               // Section 2 {form}
-              Form(
-                child: Container(
-                  padding:  const EdgeInsets.symmetric(vertical: tFormHeight -10),
-                  child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    TextFormField(
-                      decoration: const InputDecoration(
-                        prefixIcon: Icon(Icons.person_outline_outlined),
-                        labelText: tEmail,
-                        hintText: tEmailHint,
-                        border: OutlineInputBorder(),
-                      ),
-                    ),
-                    const SizedBox(height: tFormHeight,),
-                    TextFormField(
-                      decoration: const InputDecoration(
-                        prefixIcon: Icon(Icons.fingerprint),
-                        labelText: tPassword,
-                        hintText: tPassword,
-                        border: OutlineInputBorder(),
-                      suffixIcon: 
-                        IconButton(onPressed: null, 
-                        icon: Icon(Icons.remove_red_eye_sharp),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: tFormHeight -20),
-                    Align(
-                      alignment: Alignment.centerRight, 
-                      child: TextButton(onPressed: () {}, 
-                      child: const Text(tForgetPassword)),
-                      ),
-                    ElevatedButton(onPressed: () {}, 
-                    child: Text(tLogin.toUpperCase()),
-                    ),
-                  ],
-              ),
-                ),
-              ),
+              const LoginForm(),
             ],
           ),
         ),
@@ -76,3 +39,4 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+
