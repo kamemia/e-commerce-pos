@@ -35,3 +35,5 @@ const String tEmail = "E- Mail";
 const String tEmailHint = "abc@mail.com";
 const String tPassword = "Password";
 const String tForgetPassword = "Forget Password?";
+const String tSignInWithGoogle = "Sign in with Google";
+const String tDontHaveAnAccount = "Don't have an Account?";

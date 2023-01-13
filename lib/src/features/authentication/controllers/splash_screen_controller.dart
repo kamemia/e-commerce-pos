@@ -1,5 +1,4 @@
 import 'package:commerce/src/features/authentication/screens/welcome/welcome_screen.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SplashScreenController extends GetxController {
