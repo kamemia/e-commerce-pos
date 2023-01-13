@@ -24,3 +24,14 @@ const String tOnBoardingCounter3 = "3/3";
 const String tWelcomeTitle = "Build Awesome Apps";
 const String tWelcomeSubTitle =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+
+// Login Screen Text
+const String tLoginTitle = "Welcome Back, ";
+const String tLoginSubTitle =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
+const String tRememberMe = "Remember Me?";
+const String tAlreadyHaveAnAccount = "Already have an Account?";
+const String tEmail = "E- Mail";
+const String tEmailHint = "abc@mail.com";
+const String tPassword = "Password";
+const String tForgetPassword = "Forget Password?";
