@@ -21,7 +21,7 @@ const String tOnBoardingCounter2 = "2/3";
 const String tOnBoardingCounter3 = "3/3";
 
 // Welcome Screen Text
-const String tWelcomeTitle = "Build Awesome Apps";
+const String tWelcomeTitle = "Welcome to POS";
 const String tWelcomeSubTitle =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
 
@@ -40,7 +40,7 @@ const String tDontHaveAnAccount = "Don't have an Account? ";
 // Sign up Screen Text
 const String tSignupTitle = "Get on Board";
 const String tSignUpSubTitle =
-    "Create your profiel to start your Journey with us...";
+    "Create your profile to start your Journey with us...";
 const String tAlreadyHaveAnAccount = "Already have an Account? ";
 const String tFullName = "Full Name";
 const String tPhoneNo = "Phone Number";

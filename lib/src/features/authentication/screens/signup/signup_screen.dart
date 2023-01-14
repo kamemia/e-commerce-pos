@@ -28,6 +28,7 @@ class SignUpScreen extends StatelessWidget {
                 Column(
                   children: [
                     const Text("OR"),
+                    const SizedBox(height: tFormHeight - 20),
                     SizedBox(
                       width: double.infinity,
                       child: OutlinedButton.icon(

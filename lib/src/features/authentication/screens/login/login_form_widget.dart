@@ -1,5 +1,6 @@
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
+import 'package:commerce/src/features/authentication/controllers/login_controller.dart';
 import 'package:commerce/src/features/core/screens/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,13 +15,17 @@ class LoginFormWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
+    final _formKey = GlobalKey<FormState>();
     return Form(
+      key: _formKey,
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: tFormHeight - 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
+              controller: controller.email,
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.person_outline_outlined),
                 labelText: tEmail,
@@ -32,6 +37,7 @@ class LoginFormWidget extends StatelessWidget {
               height: tFormHeight,
             ),
             TextFormField(
+              controller: controller.password,
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.fingerprint),
                 labelText: tPassword,
@@ -56,10 +62,11 @@ class LoginFormWidget extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacement(
-                    context, 
-                    MaterialPageRoute(
-                      builder: (context) => const Dashboard()));
+                  if (_formKey.currentState!.validate()) {
+                    LoginController.instance.loginUser(
+                        controller.email.text.trim(),
+                        controller.password.text.trim());
+                  }
                 },
                 child: Text(tLogin.toUpperCase()),
               ),
@@ -70,4 +77,3 @@ class LoginFormWidget extends StatelessWidget {
     );
   }
 }
-
