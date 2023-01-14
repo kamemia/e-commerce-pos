@@ -20,6 +20,7 @@ dependencies:
   liquid_swipe: ^3.0.0
   smooth_page_indicator: ^1.0.0+2
   firebase_core: ^2.4.1
+  firebase_auth: ^4.2.5
 
 dev_dependencies:
   flutter_test:
