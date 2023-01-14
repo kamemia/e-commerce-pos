@@ -1,5 +1,6 @@
 import 'package:commerce/src/features/authentication/screens/forget_password/forget_password_mail/forget_password_mail.dart';
 import 'package:commerce/src/features/authentication/screens/forget_password/forget_password_options/forget_password_btn_widget.dart';
+import 'package:commerce/src/features/authentication/screens/forget_password/forget_password_phone/forget_password_phone.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -36,6 +37,8 @@ class ForgetPasswordScreen {
               title: tPhoneNo,
               subTitle: tResetViaPhone,
               onTap: () {
+                Navigator.pop(context);
+                Get.to(() => const ForgetPasswordPhoneScreen());
               },
             ),
           ],

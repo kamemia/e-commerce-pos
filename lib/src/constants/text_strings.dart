@@ -57,3 +57,4 @@ const String tForgetPhoneSubTitle =
     "Enter your registered Phone No to receive OTP";
 const String tForgetMailSubTitle =
     "Enter your registered E-mail to receive OTP";
+const String tNext = "Next";

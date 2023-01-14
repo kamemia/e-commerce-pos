@@ -4,8 +4,8 @@ import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
-class ForgetPasswordMailScreen extends StatelessWidget {
-  const ForgetPasswordMailScreen({Key? key}) : super(key: key);
+class ForgetPasswordPhoneScreen extends StatelessWidget {
+  const ForgetPasswordPhoneScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +29,9 @@ class ForgetPasswordMailScreen extends StatelessWidget {
                 children: [
                   TextFormField(
                     decoration: const InputDecoration(
-                      label: Text(tEmail),
-                      hintText: tEmailHint,
-                      prefixIcon: Icon(Icons.mail_outline_rounded),
+                      label: Text(tPhoneNo),
+                      hintText: tPhoneNo,
+                      prefixIcon: Icon(Icons.numbers_outlined),
                     ),
                   ),
                   const SizedBox(height: tFormHeight),
