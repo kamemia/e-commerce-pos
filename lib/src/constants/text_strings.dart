@@ -63,3 +63,8 @@ const String tNext = "Next";
 const String tOtpTitle = "CO\nDE";
 const String tOtpSubTitle = "Verification";
 const String tOtpMessage = "Enter the verification code sent at ";
+
+// Dashboard Screen - Text
+const String tDashboardTitle = "Hey welcome to POS";
+const String tDashboardHeading = "Explore";
+
