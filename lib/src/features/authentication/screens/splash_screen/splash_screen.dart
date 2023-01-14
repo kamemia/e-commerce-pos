@@ -1,5 +1,3 @@
-
-
 import 'package:commerce/src/constants/colors.dart';
 import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';
@@ -13,70 +11,76 @@ class SplashScreen extends StatelessWidget {
 
   final splashController = Get.put(SplashScreenController());
 
+
   @override
   Widget build(BuildContext context) {
-    splashController.startAnimation();
-    return SafeArea(
-      child: Scaffold(
-        body: Stack(
-          children: [
-            AnimatedPositioned(
+    SplashScreenController.find.startAnimation();
+
+
+    return Scaffold(
+      body: Stack(
+        children: [
+          Obx(
+            () => AnimatedPositioned(
               duration: const Duration(milliseconds: 1600),
-              top: splashController.animate.value ? 0: -30,
-              left: splashController.animate.value ? 0: -30,
-              child: const Image(
-                image: AssetImage(tSplashTopIcon),
+              top: splashController.animate.value ? 0 : -30,
+              left: splashController.animate.value ? 0 : -30,
+              child: AnimatedOpacity(
+                duration: const Duration(milliseconds: 1600),
+                opacity: splashController.animate.value ? 1 : 0,
+                child: const Image(image: AssetImage(tSplashTopIcon)),
               ),
             ),
-            AnimatedPositioned(
-              duration: const Duration(milliseconds: 1600),
+          ),
+          Obx(
+            () => AnimatedPositioned(
+              duration: const Duration(milliseconds: 2000),
               top: 80,
               left: splashController.animate.value ? tDefaultSize : -80,
               child: AnimatedOpacity(
-                duration: const Duration(milliseconds: 1600),
+                duration: const Duration(milliseconds: 2000),
                 opacity: splashController.animate.value ? 1 : 0,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      tAppName,
-                      style: Theme.of(context).textTheme.headline3,
-                    ),
-                    Text(
-                      tAppTagLine,
-                      style: Theme.of(context).textTheme.headline2,
-                    )
+                    Text(tAppName, style: Theme.of(context).textTheme.headline3),
+                    Text(tAppTagLine, style: Theme.of(context).textTheme.headline2)
                   ],
                 ),
               ),
             ),
-            AnimatedPositioned(
+          ),
+          Obx(
+            () => AnimatedPositioned(
               duration: const Duration(milliseconds: 2400),
               bottom: splashController.animate.value ? 100 : 0,
               child: AnimatedOpacity(
                 duration: const Duration(milliseconds: 2000),
                 opacity: splashController.animate.value ? 1 : 0,
                 child: const Image(image: AssetImage(tSplashImage)),
-                ),
+              ),
             ),
-            AnimatedPositioned(
+          ),
+          Obx(
+            () => AnimatedPositioned(
               duration: const Duration(milliseconds: 2400),
-                bottom: splashController.animate.value ? 60 : 0,
-                right: tDefaultSize,
-                child: AnimatedOpacity(
-                  duration: const Duration(milliseconds: 2000),
-                  opacity: splashController.animate.value ? 1 : 0,
-                  child: Container(
-                    width: tSplashContainerSize,
-                    height: tSplashContainerSize,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: tPrimaryColor,
-                    ),
+              bottom: splashController.animate.value ? 60 : 0,
+              right: tDefaultSize,
+              child: AnimatedOpacity(
+                duration: const Duration(milliseconds: 2000),
+                opacity: splashController.animate.value ? 1 : 0,
+                child: Container(
+                  width: tSplashContainerSize,
+                  height: tSplashContainerSize,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: tPrimaryColor,
                   ),
-                )),
-          ],
-        ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
