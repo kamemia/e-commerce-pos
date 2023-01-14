@@ -1,12 +1,14 @@
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
+import 'package:commerce/src/features/core/screens/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../forget_password/forget_password_options/forget_password_btn_widget.dart';
 import '../forget_password/forget_password_options/forget_password_model_bottom_sheet.dart';
 
-class LoginForm extends StatelessWidget {
-  const LoginForm({
+class LoginFormWidget extends StatelessWidget {
+  const LoginFormWidget({
     Key? key,
   }) : super(key: key);
 
@@ -53,7 +55,12 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) => const Dashboard()));
+                },
                 child: Text(tLogin.toUpperCase()),
               ),
             ),

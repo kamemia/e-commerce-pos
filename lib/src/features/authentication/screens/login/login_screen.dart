@@ -1,4 +1,7 @@
+import 'package:commerce/src/common_widgets/form/form_header_widget.dart';
+import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';
+import 'package:commerce/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
 import 'login_footer_widget.dart';
@@ -17,11 +20,13 @@ class LoginScreen extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(tDefaultSize),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              LoginHeaderWidget(size: size),
-              const LoginForm(),
-              const LoginFooterWidget()
+            children: const[
+              FormHeaderWidget(
+                image: tWelcomeScreenImage, 
+                title: tLoginTitle, 
+                subTitle: tLoginSubTitle),
+              LoginFormWidget(),
+              LoginFooterWidget()
             ],
           ),
         ),
