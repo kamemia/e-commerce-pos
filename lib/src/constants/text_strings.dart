@@ -67,4 +67,4 @@ const String tOtpMessage = "Enter the verification code sent at ";
 // Dashboard Screen - Text
 const String tDashboardTitle = "Hey welcome to POS";
 const String tDashboardHeading = "Explore";
-
+const String tDashboardSearch = "Search";

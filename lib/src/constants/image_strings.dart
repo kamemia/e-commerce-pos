@@ -1,5 +1,6 @@
 const String tSplashTopIcon = "assets/images/splash_images/splash-top-icon.png";
-const String tSplashImage = "assets/images/splash_images/splash-screen-image.png";
+const String tSplashImage =
+    "assets/images/splash_images/splash-screen-image.png";
 
 const String tOnBoardingImage1 =
     "assets/images/on_boarding_images/on-boarding-image-1.png";
@@ -26,3 +27,4 @@ const String tBannerImage1 = "assets/images/dashboard/dash-01.png";
 const String tBannerImage2 = "assets/images/dashboard/dash-02.png";
 const String tTopCourseImage1 = "assets/images/dashboard/dash-03.png";
 const String tTopCourseImage2 = "assets/images/dashboard/dash-04.png";
+const String tBookMarkIcon = "assets/images/dashboard/book-icon.png";
