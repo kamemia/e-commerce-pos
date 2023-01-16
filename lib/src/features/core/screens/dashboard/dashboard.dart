@@ -23,8 +23,8 @@ class Dashboard extends StatelessWidget {
             Container(
               margin: const EdgeInsets.only(right: 20, top: 7),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10), color: tCardBgColor),
-              child: IconButton(
+                  borderRadius: BorderRadius.circular(10)),
+              child: IconButton(             
                   onPressed: () {},
                   icon: const Image(image: AssetImage(tUserProfielImage))),
             )
@@ -50,23 +50,29 @@ class Dashboard extends StatelessWidget {
                   ]),                 
                 ),
 
+
+                const SizedBox(height: tFormHeight -20),
+
                 // Categories
-                SizedBox(
-                  width: 170,
-                  height: 50,
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 45,
-                        height: 45,
-                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: tDarkColor),
-                        child: Center(
-                          child: Text("JS", style: txtTheme.headline6?.apply(color: Colors.white),),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
+                // SizedBox(
+                //   width: 170,
+                //   height: 50,
+                //   child: Row(
+                //     children: [
+                //       Container(
+                //         width: 45,
+                //         height: 45,
+                //         decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: tDarkColor),
+                //         child: Center(
+                //           child: Text("JS", style: txtTheme.headline6?.apply(color: Colors.white),),
+                //         ),
+                //       )
+                //     ],
+                //   ),
+                // ),
+
+
+                const SizedBox(height: tFormHeight -20),
 
                 // Banners
                 Row(
@@ -83,13 +89,13 @@ class Dashboard extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const[
-                              Flexible(child: Image(image: AssetImage(tBookMarkIcon))),
-                              Flexible(child: Image(image: AssetImage(tBookMarkIcon))),
+                              Flexible(child: Image(image: AssetImage(tCustomerIcon))),
+                              // Flexible(child: Image(image: AssetImage(tCustomerIcon))),
                            ],
                           ),
                           const SizedBox(height: 20),
-                            Text(tDashboardHeading, style: txtTheme.headline4, maxLines: 2, overflow: TextOverflow.ellipsis),
-                            Text(tDashboardTitle, style: txtTheme.bodyText2, maxLines: 1,overflow: TextOverflow.ellipsis)
+                            Text(tCustomerTitle, style: txtTheme.headline4, maxLines: 2, overflow: TextOverflow.ellipsis),
+                            Text(tCustomerSubtitle, style: txtTheme.bodyText2, maxLines: 1,overflow: TextOverflow.ellipsis)
                           
                         ],
                       ), 
@@ -102,12 +108,148 @@ class Dashboard extends StatelessWidget {
                           Container(
                             decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: tCardBgColor),
                             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                          child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const[
+                              Flexible(child: Image(image: AssetImage(tCustomerIcon))),
+                              // Flexible(child: Image(image: AssetImage(tCustomerIcon))),
+                           ],
+                          ),
+                          const SizedBox(height: 20),
+                            Text(tProductsTitle, style: txtTheme.headline4, maxLines: 2, overflow: TextOverflow.ellipsis),
+                            Text(tProductsSubTitle, style: txtTheme.bodyText2, maxLines: 1,overflow: TextOverflow.ellipsis)
+                          
+                        ],
+                      ),
                           )
                         ],
                       )
                       )
                   ],
-                )
+                ),
+
+                const SizedBox(height: tFormHeight),
+
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: tCardBgColor),
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const[
+                              Flexible(child: Image(image: AssetImage(tCustomerIcon))),
+                              // Flexible(child: Image(image: AssetImage(tCustomerIcon))),
+                           ],
+                          ),
+                          const SizedBox(height: 20),
+                            Text(tSaleTitle, style: txtTheme.headline4, maxLines: 2, overflow: TextOverflow.ellipsis),
+                            Text(tSaleSubtitle, style: txtTheme.bodyText2, maxLines: 1,overflow: TextOverflow.ellipsis)
+                          
+                        ],
+                      ), 
+                      ),
+                    ),
+                    const SizedBox(width: tDashboardCardPadding),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: tCardBgColor),
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                          child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const[
+                              Flexible(child: Image(image: AssetImage(tCustomerIcon))),
+                              // Flexible(child: Image(image: AssetImage(tCustomerIcon))),
+                           ],
+                          ),
+                          const SizedBox(height: 20),
+                            Text(tDiscountTitle, style: txtTheme.headline4, maxLines: 2, overflow: TextOverflow.ellipsis),
+                            Text(tDiscountSubTitle, style: txtTheme.bodyText2, maxLines: 1,overflow: TextOverflow.ellipsis)
+                          
+                        ],
+                      ),
+                          )
+                        ],
+                      )
+                      )
+                  ],
+                ),
+
+                const SizedBox(height: tFormHeight),
+
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: tCardBgColor),
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const[
+                              Flexible(child: Image(image: AssetImage(tCustomerIcon))),
+                              // Flexible(child: Image(image: AssetImage(tCustomerIcon))),
+                           ],
+                          ),
+                          const SizedBox(height: 20),
+                            Text(tShipTitle, style: txtTheme.headline4, maxLines: 2, overflow: TextOverflow.ellipsis),
+                            Text(tShipSubTitle, style: txtTheme.bodyText2, maxLines: 1,overflow: TextOverflow.ellipsis)
+                          
+                        ],
+                      ), 
+                      ),
+                    )
+                    // const SizedBox(width: tDashboardCardPadding),
+                    // Expanded(
+                    //   child: Column(
+                    //     children: [
+                    //       Container(
+                    //         decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: tCardBgColor),
+                    //         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                    //       child: Column(
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: [
+                    //       Row(
+                    //         crossAxisAlignment: CrossAxisAlignment.start,
+                    //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //         children: const[
+                    //           Flexible(child: Image(image: AssetImage(tCustomerIcon))),
+                    //           // Flexible(child: Image(image: AssetImage(tCustomerIcon))),
+                    //        ],
+                    //       ),
+                    //       const SizedBox(height: 20),
+                    //         Text(tDiscountTitle, style: txtTheme.headline4, maxLines: 2, overflow: TextOverflow.ellipsis),
+                    //         Text(tDiscountSubTitle, style: txtTheme.bodyText2, maxLines: 1,overflow: TextOverflow.ellipsis)
+                          
+                    //     ],
+                    //   ),
+                    //       )
+                    //     ],
+                    //   )
+                    //   )
+                  ],
+                ),
+
               ],
             ),
           ),

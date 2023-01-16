@@ -68,3 +68,14 @@ const String tOtpMessage = "Enter the verification code sent at ";
 const String tDashboardTitle = "Hey welcome to POS";
 const String tDashboardHeading = "Explore";
 const String tDashboardSearch = "Search";
+const String tCustomerTitle = "Customer";
+const String tCustomerSubtitle = "Add customer";
+const String tSaleTitle = "Sale";
+const String tSaleSubtitle = "Add custom sale";
+const String tDiscountTitle = "Discount";
+const String tDiscountSubTitle = "Apply discount";
+const String tShipTitle = "Shipment";
+const String tShipSubTitle = "Ship to customer";
+const String tProductsTitle = "Products";
+const String tProductsSubTitle = "Add products";
+
