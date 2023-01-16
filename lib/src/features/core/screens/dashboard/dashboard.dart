@@ -132,7 +132,7 @@ class Dashboard extends StatelessWidget {
                   ],
                 ),
 
-                const SizedBox(height: tFormHeight),
+                const SizedBox(height: 10),
 
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -191,7 +191,7 @@ class Dashboard extends StatelessWidget {
                   ],
                 ),
 
-                const SizedBox(height: tFormHeight),
+                const SizedBox(height: 10),
 
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
