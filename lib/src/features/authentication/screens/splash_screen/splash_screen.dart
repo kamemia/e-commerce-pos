@@ -57,7 +57,7 @@ class SplashScreen extends StatelessWidget {
               child: AnimatedOpacity(
                 duration: const Duration(milliseconds: 2000),
                 opacity: splashController.animate.value ? 1 : 0,
-                child: const Image(image: AssetImage(tSplashImage)),
+                child: const Image(image: AssetImage(tWelcomeScreenImage)),
               ),
             ),
           ),

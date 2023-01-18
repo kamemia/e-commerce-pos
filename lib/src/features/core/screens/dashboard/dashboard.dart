@@ -2,6 +2,7 @@ import 'package:commerce/src/constants/colors.dart';
 import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
+import 'package:commerce/src/features/core/screens/sale/sales.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
@@ -81,43 +82,8 @@ class Dashboard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: tCardBgColor),
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10, vertical: 20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Flexible(
-                                    child: Image(
-                                        image: AssetImage(tCustomerIcon))),
-                                // Flexible(child: Image(image: AssetImage(tCustomerIcon))),
-                              ],
-                            ),
-                            const SizedBox(height: 20),
-                            Text(tCustomerTitle,
-                                style: txtTheme.headline4,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis),
-                            Text(tCustomerSubtitle,
-                                style: txtTheme.bodyText2,
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis)
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: tDashboardCardPadding),
-                    Expanded(
-                        child: Column(
-                      children: [
-                        Container(
+                      child: InkWell(
+                        child: Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: tCardBgColor),
@@ -128,8 +94,7 @@ class Dashboard extends StatelessWidget {
                             children: [
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: const [
                                   Flexible(
                                       child: Image(
@@ -138,19 +103,59 @@ class Dashboard extends StatelessWidget {
                                 ],
                               ),
                               const SizedBox(height: 20),
-                              Text(tProductsTitle,
+                              Text(tCustomerTitle,
                                   style: txtTheme.headline4,
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis),
-                              Text(tProductsSubTitle,
+                              Text(tCustomerSubtitle,
                                   style: txtTheme.bodyText2,
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis)
                             ],
                           ),
-                        )
-                      ],
-                    ))
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: tDashboardCardPadding),
+                    Expanded(
+                      child: InkWell(
+                        child: Column(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: tCardBgColor),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Flexible(
+                                        child: Image(
+                                            image: AssetImage(tCustomerIcon))),
+                                    // Flexible(child: Image(image: AssetImage(tCustomerIcon))),
+                                  ],
+                                ),
+                                const SizedBox(height: 20),
+                                Text(tProductsTitle,
+                                    style: txtTheme.headline4,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis),
+                                Text(tProductsSubTitle,
+                                    style: txtTheme.bodyText2,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis)
+                              ],
+                            ),
+                          )
+                        ],
+                                          ),
+                      ))
                   ],
                 ),
 
@@ -160,9 +165,12 @@ class Dashboard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
-                      child: GestureDetector(
+                      child: InkWell(
                         onTap: () {
-                          print("touch");
+                          Navigator.push(
+                            context, 
+                            MaterialPageRoute(builder: (context) => const SalesScreen()),
+                          );
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -200,9 +208,55 @@ class Dashboard extends StatelessWidget {
                     ),
                     const SizedBox(width: tDashboardCardPadding),
                     Expanded(
+                      child: InkWell(
                         child: Column(
-                      children: [
-                        Container(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: tCardBgColor),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Flexible(
+                                        child: Image(
+                                            image: AssetImage(tCustomerIcon))),
+                                    // Flexible(child: Image(image: AssetImage(tCustomerIcon))),
+                                  ],
+                                ),
+                                const SizedBox(height: 20),
+                                Text(tDiscountTitle,
+                                    style: txtTheme.headline4,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis),
+                                Text(tDiscountSubTitle,
+                                    style: txtTheme.bodyText2,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis)
+                              ],
+                            ),
+                          )
+                        ],
+                                          ),
+                      ))
+                  ],
+                ),
+
+                const SizedBox(height: 10),
+
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: InkWell(
+                        child: Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: tCardBgColor),
@@ -213,8 +267,7 @@ class Dashboard extends StatelessWidget {
                             children: [
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: const [
                                   Flexible(
                                       child: Image(
@@ -223,57 +276,16 @@ class Dashboard extends StatelessWidget {
                                 ],
                               ),
                               const SizedBox(height: 20),
-                              Text(tDiscountTitle,
+                              Text(tShipTitle,
                                   style: txtTheme.headline4,
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis),
-                              Text(tDiscountSubTitle,
+                              Text(tShipSubTitle,
                                   style: txtTheme.bodyText2,
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis)
                             ],
                           ),
-                        )
-                      ],
-                    ))
-                  ],
-                ),
-
-                const SizedBox(height: 10),
-
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: tCardBgColor),
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10, vertical: 20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Flexible(
-                                    child: Image(
-                                        image: AssetImage(tCustomerIcon))),
-                                // Flexible(child: Image(image: AssetImage(tCustomerIcon))),
-                              ],
-                            ),
-                            const SizedBox(height: 20),
-                            Text(tShipTitle,
-                                style: txtTheme.headline4,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis),
-                            Text(tShipSubTitle,
-                                style: txtTheme.bodyText2,
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis)
-                          ],
                         ),
                       ),
                     )
