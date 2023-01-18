@@ -46,7 +46,7 @@ class SignUpFormWidget extends StatelessWidget {
               controller: controller.phoneNo,
               decoration: const InputDecoration(
                 label: Text(tPhoneNo),
-                prefixIcon: Icon(Icons.numbers),
+                prefixIcon: Icon(Icons.phone_outlined),
               ),
               // initialCountryCode: 'KE',
               // onChanged: (phone) {
@@ -63,7 +63,7 @@ class SignUpFormWidget extends StatelessWidget {
               controller: controller.password,
               decoration: const InputDecoration(
                 label: Text(tPassword),
-                prefixIcon: Icon(Icons.fingerprint),
+                prefixIcon: Icon(Icons.fingerprint_outlined),
               ),
             ),
             const SizedBox(

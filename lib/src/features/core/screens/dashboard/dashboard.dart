@@ -33,8 +33,8 @@ class Dashboard extends StatelessWidget {
           ],
         ),
         body: SingleChildScrollView(
+          
           child: Container(
-            color: tPrimaryColor,
             padding: const EdgeInsets.all(tDashboardPadding),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

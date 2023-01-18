@@ -28,6 +28,12 @@ class CustomerFormWidget extends StatelessWidget {
                 label: Text(tFirstName),
                 prefixIcon: Icon(Icons.person_outline_rounded),
               ),
+              // validator: (value) {
+              //   if (value == null || value.isEmpty) {
+              //     return 'Please enter your first name';
+              //   }
+              // return null;
+              // },
             ),
             const SizedBox(
               height: tFormHeight - 20,
@@ -55,7 +61,7 @@ class CustomerFormWidget extends StatelessWidget {
               controller: controller.phoneNo,
               decoration: const InputDecoration(
                 label: Text(tPhoneNo),
-                prefixIcon: Icon(Icons.numbers),
+                prefixIcon: Icon(Icons.phone_outlined),
               ),
               // initialCountryCode: 'KE',
               // onChanged: (phone) {
