@@ -79,3 +79,8 @@ const String tShipSubTitle = "Ship to customer";
 const String tProductsTitle = "Products";
 const String tProductsSubTitle = "Add products";
 
+// Customer Screen - Text
+const String tFirstName = "First name";
+const String tLastName = "Last Name";
+const String tAddress = "Addresses";
+const String tSave = "Save";

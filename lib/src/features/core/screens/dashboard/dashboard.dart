@@ -2,7 +2,8 @@ import 'package:commerce/src/constants/colors.dart';
 import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
-import 'package:commerce/src/features/core/screens/sale/sales.dart';
+import 'package:commerce/src/features/core/screens/customer/customer_screen.dart';
+import 'package:commerce/src/features/core/screens/sale/sales_screen.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
@@ -83,12 +84,15 @@ class Dashboard extends StatelessWidget {
                   children: [
                     Expanded(
                       child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context, 
+                            MaterialPageRoute(builder: (context) => const CustomerScreen()),
+                          );
+                        },
                         child: Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: tCardBgColor),
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 10, vertical: 20),
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: tCardBgColor),
+                          padding: const EdgeInsets.symmetric( horizontal: 10, vertical: 20),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -97,20 +101,13 @@ class Dashboard extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: const [
                                   Flexible(
-                                      child: Image(
-                                          image: AssetImage(tCustomerIcon))),
+                                      child: Image(image: AssetImage(tCustomerIcon))),
                                   // Flexible(child: Image(image: AssetImage(tCustomerIcon))),
                                 ],
                               ),
                               const SizedBox(height: 20),
-                              Text(tCustomerTitle,
-                                  style: txtTheme.headline4,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis),
-                              Text(tCustomerSubtitle,
-                                  style: txtTheme.bodyText2,
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis)
+                              Text(tCustomerTitle, style: txtTheme.headline4, maxLines: 2, overflow: TextOverflow.ellipsis),
+                              Text(tCustomerSubtitle,style: txtTheme.bodyText2, maxLines: 1, overflow: TextOverflow.ellipsis)
                             ],
                           ),
                         ),

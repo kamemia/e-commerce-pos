@@ -1,19 +1,19 @@
 import 'package:commerce/src/features/authentication/controllers/signup_controller.dart';
-import 'package:commerce/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
+import 'package:commerce/src/features/core/controllers/customer_controller.dart';
+
 import 'package:flutter/material.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
 import 'package:get/get.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
 
-class SignUpFormWidget extends StatelessWidget {
-  const SignUpFormWidget({
+class CustomerFormWidget extends StatelessWidget {
+  const CustomerFormWidget({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(SignUpController());
+    final controller = Get.put(CustomerController());
     final _formKey = GlobalKey<FormState>();
     return Container(
       padding: const EdgeInsets.symmetric(vertical: tFormHeight - 10),
@@ -23,14 +23,23 @@ class SignUpFormWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
-              controller: controller.fullName,
+              controller: controller.firstName,
               decoration: const InputDecoration(
-                label: Text(tFullName),
+                label: Text(tFirstName),
                 prefixIcon: Icon(Icons.person_outline_rounded),
               ),
             ),
             const SizedBox(
               height: tFormHeight - 20,
+            ),
+            TextFormField(
+              controller: controller.lastName,
+              decoration: const InputDecoration(
+                label: Text(tLastName),
+              ),
+            ),
+            const SizedBox(
+              height: tFormHeight -20,
             ),
             TextFormField(
               controller: controller.email,
@@ -60,10 +69,10 @@ class SignUpFormWidget extends StatelessWidget {
               height: tFormHeight - 20,
             ),
             TextFormField(
-              controller: controller.password,
+              controller: controller.addresses,
               decoration: const InputDecoration(
-                label: Text(tPassword),
-                prefixIcon: Icon(Icons.fingerprint),
+                label: Text(tAddress),
+                prefixIcon: Icon(Icons.location_city_outlined),
               ),
             ),
             const SizedBox(
@@ -73,14 +82,15 @@ class SignUpFormWidget extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    // SignUpController.instance.registerUser(controller.email.text.trim(),controller.password.text.trim());
-                    SignUpController.instance
-                        .phoneAuthentication(controller.phoneNo.text.trim());
-                    Get.to(() => const OTPScreen());
-                  }
+                  print("Information Saved");
+                  // if (_formKey.currentState!.validate()) {
+                  //   SignUpController.instance.registerUser(controller.email.text.trim(),controller.password.text.trim());
+                  //   SignUpController.instance
+                  //       .phoneAuthentication(controller.phoneNo.text.trim());
+                  //   Get.to(() => const OTPScreen());
+                  // }
                 },
-                child: Text(tSignup.toUpperCase()),
+                child: Text(tSave.toUpperCase()),
               ),
             )
           ],

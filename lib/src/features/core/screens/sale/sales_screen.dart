@@ -2,7 +2,7 @@ import 'package:commerce/src/common_widgets/form/form_header_widget.dart';
 import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
-import 'package:commerce/src/features/authentication/screens/signup/widgets/signup_form_widget.dart';
+import 'package:commerce/src/features/core/screens/sale/widgets/sales_form_widget.dart';
 import 'package:flutter/material.dart';
 
 
@@ -17,13 +17,13 @@ class SalesScreen extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(tDefaultSize),
             child: Column(
-              children: [
-                const FormHeaderWidget(
+              children: const [
+                FormHeaderWidget(
                   image: tWelcomeScreenImage, 
                   title: tSignup, 
                   subTitle: tSignUpSubTitle,
                   ),
-                const SignUpFormWidget(),
+                SalesFormWidget(),
               ],
             ),
           ),
