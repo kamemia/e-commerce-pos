@@ -12,7 +12,7 @@ class CustomerController extends GetxController {
   final lastName = TextEditingController();
   final phoneNo = TextEditingController();
 
-  //Call this function from Design & it will do the rest
+  //Call this function from Desing & it will do the rest
   // void registerUser(String email, String password) {
   //   String? error = AuthenticationRepository.instance
   //       .createUserWithEmailAndPassword(email, password) as String?;

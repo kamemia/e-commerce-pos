@@ -34,6 +34,7 @@ class Dashboard extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Container(
+            color: tPrimaryColor,
             padding: const EdgeInsets.all(tDashboardPadding),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -119,11 +120,8 @@ class Dashboard extends StatelessWidget {
                         child: Column(
                         children: [
                           Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: tCardBgColor),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 20),
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: tCardBgColor),
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -133,20 +131,13 @@ class Dashboard extends StatelessWidget {
                                       MainAxisAlignment.spaceBetween,
                                   children: const [
                                     Flexible(
-                                        child: Image(
-                                            image: AssetImage(tCustomerIcon))),
+                                        child: Image(image: AssetImage(tProductIcon))),
                                     // Flexible(child: Image(image: AssetImage(tCustomerIcon))),
                                   ],
                                 ),
                                 const SizedBox(height: 20),
-                                Text(tProductsTitle,
-                                    style: txtTheme.headline4,
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis),
-                                Text(tProductsSubTitle,
-                                    style: txtTheme.bodyText2,
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis)
+                                Text(tProductsTitle, style: txtTheme.headline4, maxLines: 2, overflow: TextOverflow.ellipsis),
+                                Text(tProductsSubTitle, style: txtTheme.bodyText2, maxLines: 1, overflow: TextOverflow.ellipsis)
                               ],
                             ),
                           )
