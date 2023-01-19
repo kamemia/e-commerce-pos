@@ -1,3 +1,4 @@
+import 'package:commerce/src/common_widgets/form/password_field.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
 import 'package:commerce/src/features/authentication/controllers/login_controller.dart';
@@ -34,19 +35,20 @@ class LoginFormWidget extends StatelessWidget {
             const SizedBox(
               height: tFormHeight,
             ),
-            TextFormField(
-              controller: controller.password,
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.fingerprint),
-                labelText: tPassword,
-                hintText: tPassword,
-                border: OutlineInputBorder(),
-                suffixIcon: IconButton(
-                  onPressed: null,
-                  icon: Icon(Icons.remove_red_eye_sharp),
-                ),
-              ),
-            ),
+            // TextFormField(
+            //   controller: controller.password,
+            //   decoration: const InputDecoration(
+            //     prefixIcon: Icon(Icons.fingerprint),
+            //     labelText: tPassword,
+            //     hintText: tPassword,
+            //     border: OutlineInputBorder(),
+            //     suffixIcon: IconButton(
+            //       onPressed: null,
+            //       icon: Icon(Icons.remove_red_eye_sharp),
+            //     ),
+            //   ),
+            // ),
+            PasswordField(),
             const SizedBox(height: tFormHeight - 20),
             Align(
               alignment: Alignment.centerRight,

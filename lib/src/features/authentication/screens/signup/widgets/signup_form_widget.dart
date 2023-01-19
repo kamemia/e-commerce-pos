@@ -1,3 +1,4 @@
+import 'package:commerce/src/common_widgets/form/password_field.dart';
 import 'package:commerce/src/features/authentication/controllers/signup_controller.dart';
 import 'package:commerce/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
 import 'package:flutter/material.dart';
@@ -59,13 +60,14 @@ class SignUpFormWidget extends StatelessWidget {
             const SizedBox(
               height: tFormHeight - 20,
             ),
-            TextFormField(
-              controller: controller.password,
-              decoration: const InputDecoration(
-                label: Text(tPassword),
-                prefixIcon: Icon(Icons.fingerprint_outlined),
-              ),
-            ),
+            // TextFormField(
+            //   controller: controller.password,
+            //   decoration: const InputDecoration(
+            //     label: Text(tPassword),
+            //     prefixIcon: Icon(Icons.fingerprint_outlined),
+            //   ),
+            // ),
+            PasswordField(),
             const SizedBox(
               height: tFormHeight - 20,
             ),
