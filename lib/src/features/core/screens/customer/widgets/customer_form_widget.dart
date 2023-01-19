@@ -1,4 +1,5 @@
 import 'package:commerce/src/features/authentication/controllers/signup_controller.dart';
+import 'package:commerce/src/features/authentication/models/customer_model.dart';
 import 'package:commerce/src/features/core/controllers/customer_controller.dart';
 
 import 'package:flutter/material.dart';
@@ -95,6 +96,14 @@ class CustomerFormWidget extends StatelessWidget {
                   //       .phoneAuthentication(controller.phoneNo.text.trim());
                   //   Get.to(() => const OTPScreen());
                   // }
+                  final customer = CustomerModel(
+                    firstName: controller.firstName.text.trim(),
+                    lastName: controller.lastName.text.trim(),
+                    email: controller.email.text.trim(),
+                    phoneNo: controller.phoneNo.text.trim(),
+                    addresses: controller.addresses.text.trim(),
+                  );
+                  CustomerController.instance.createCustomer(customer);
                 },
                 child: Text(tSave.toUpperCase()),
               ),
