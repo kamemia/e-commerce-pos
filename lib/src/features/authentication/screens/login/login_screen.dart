@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:commerce/src/common_widgets/form/form_header_widget.dart';
 import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';

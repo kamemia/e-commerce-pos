@@ -24,7 +24,7 @@ class CustomerController extends GetxController {
   // }
 
   // Get phoneNo from user and pass it to Auth Repository for firebase Authentication
-  // void phoneAuthentication(String phoneNo) {
-  //   AuthenticationRepository.instance.phoneAuthentication(phoneNo);
-  // }
+  void phoneAuthentication(String phoneNo) {
+    AuthenticationRepository.instance.phoneAuthentication(phoneNo);
+  }
 }
