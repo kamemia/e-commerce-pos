@@ -3,8 +3,12 @@ import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
 import 'package:commerce/src/features/core/screens/customer/customer_screen.dart';
+import 'package:commerce/src/features/core/screens/product/product_screen.dart';
 import 'package:commerce/src/features/core/screens/sale/sales_screen.dart';
 import 'package:flutter/material.dart';
+
+import '../discount/discount_screen.dart';
+import '../shipment/shipment_screen.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -117,6 +121,12 @@ class Dashboard extends StatelessWidget {
                     const SizedBox(width: tDashboardCardPadding),
                     Expanded(
                       child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context, 
+                            MaterialPageRoute(builder: (context) => const ProductScreen()),
+                          );
+                        },
                         child: Column(
                         children: [
                           Container(
@@ -197,6 +207,12 @@ class Dashboard extends StatelessWidget {
                     const SizedBox(width: tDashboardCardPadding),
                     Expanded(
                       child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context, 
+                            MaterialPageRoute(builder: (context) => const DiscountScreen()),
+                          );
+                        },
                         child: Column(
                         children: [
                           Container(
@@ -232,7 +248,7 @@ class Dashboard extends StatelessWidget {
                             ),
                           )
                         ],
-                                          ),
+                        ),
                       ))
                   ],
                 ),
@@ -244,6 +260,12 @@ class Dashboard extends StatelessWidget {
                   children: [
                     Expanded(
                       child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context, 
+                            MaterialPageRoute(builder: (context) => const ShipmentScreen()),
+                          );
+                        },
                         child: Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),

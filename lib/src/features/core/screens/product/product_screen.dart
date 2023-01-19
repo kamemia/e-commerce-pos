@@ -5,8 +5,8 @@ import 'package:commerce/src/constants/text_strings.dart';
 import 'package:commerce/src/features/core/screens/product/widgets/product_form_widget.dart';
 import 'package:flutter/material.dart';
 
-class CustomerScreen extends StatelessWidget {
-  const CustomerScreen({Key? key}) : super(key: key);
+class ProductScreen extends StatelessWidget {
+  const ProductScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

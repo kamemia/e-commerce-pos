@@ -2,8 +2,8 @@ import 'package:commerce/src/repository/authentication_repository/authentication
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ProductController extends GetxController {
-  static ProductController get instance => Get.find();
+class DiscountController extends GetxController {
+  static DiscountController get instance => Get.find();
 
   // TextField Controllers to get data from TextFields
   final email = TextEditingController();

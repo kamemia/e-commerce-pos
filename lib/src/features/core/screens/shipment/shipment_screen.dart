@@ -3,10 +3,14 @@ import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:commerce/src/features/core/screens/customer/widgets/customer_form_widget.dart';
 
-class CustomerScreen extends StatelessWidget {
-  const CustomerScreen({Key ? key}) : super(key: key);
+import 'widget/shipment_form_widget.dart';
+
+
+
+
+class ShipmentScreen extends StatelessWidget {
+  const ShipmentScreen({Key ? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +26,7 @@ class CustomerScreen extends StatelessWidget {
                   title: tSignup, 
                   subTitle: tSignUpSubTitle,
                   ),
-                CustomerFormWidget(),
+                ShipmentFormWidget(),
               ],
             ),
           ),

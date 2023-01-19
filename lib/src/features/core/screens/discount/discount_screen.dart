@@ -2,11 +2,14 @@ import 'package:commerce/src/common_widgets/form/form_header_widget.dart';
 import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
+import 'package:commerce/src/features/core/screens/sale/widgets/sales_form_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:commerce/src/features/core/screens/customer/widgets/customer_form_widget.dart';
 
-class CustomerScreen extends StatelessWidget {
-  const CustomerScreen({Key ? key}) : super(key: key);
+import 'widgets/discount_form_widget.dart';
+
+
+class DiscountScreen extends StatelessWidget {
+  const DiscountScreen({Key ? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,7 @@ class CustomerScreen extends StatelessWidget {
                   title: tSignup, 
                   subTitle: tSignUpSubTitle,
                   ),
-                CustomerFormWidget(),
+                DiscountFormWidget(),
               ],
             ),
           ),

@@ -61,20 +61,21 @@ class SalesFormWidget extends StatelessWidget {
             const SizedBox(
               height: tFormHeight - 20,
             ),
-            // SizedBox(
-            //   width: double.infinity,
-            //   child: ElevatedButton(
-            //     onPressed: () {
-            //       if (_formKey.currentState!.validate()) {
-            //         // SignUpController.instance.registerUser(controller.email.text.trim(),controller.password.text.trim());
-            //         SignUpController.instance
-            //             .phoneAuthentication(controller.phoneNo.text.trim());
-            //         Get.to(() => const OTPScreen());
-            //       }
-            //     },
-            //     child: Text(tSignup.toUpperCase()),
-            //   ),
-            // )
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {
+                  print("Information Saved");
+                  // if (_formKey.currentState!.validate()) {
+                  //   SignUpController.instance.registerUser(controller.email.text.trim(),controller.password.text.trim());
+                  //   SignUpController.instance
+                  //       .phoneAuthentication(controller.phoneNo.text.trim());
+                  //   Get.to(() => const OTPScreen());
+                  // }
+                },
+                child: Text(tSave.toUpperCase()),
+              ),
+            )
           ],
         ),
       ),

@@ -1,17 +1,20 @@
-import 'package:commerce/src/features/core/controllers/product_controller.dart';
+import 'package:commerce/src/features/authentication/controllers/signup_controller.dart';
+import 'package:commerce/src/features/core/controllers/customer_controller.dart';
+import 'package:commerce/src/features/core/controllers/discount_controller.dart';
+
 import 'package:flutter/material.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
 import 'package:get/get.dart';
 
-class ProductFormWidget extends StatelessWidget {
-  const ProductFormWidget({
+class DiscountFormWidget extends StatelessWidget {
+  const DiscountFormWidget({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(ProductController());
+    final controller = Get.put(DiscountController());
     final _formKey = GlobalKey<FormState>();
     return Container(
       padding: const EdgeInsets.symmetric(vertical: tFormHeight - 10),
@@ -26,6 +29,12 @@ class ProductFormWidget extends StatelessWidget {
                 label: Text(tFirstName),
                 prefixIcon: Icon(Icons.person_outline_rounded),
               ),
+              // validator: (value) {
+              //   if (value == null || value.isEmpty) {
+              //     return 'Please enter your first name';
+              //   }
+              // return null;
+              // },
             ),
             const SizedBox(
               height: tFormHeight - 20,
