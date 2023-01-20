@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 
 import '../discount/discount_screen.dart';
 import '../shipment/shipment_screen.dart';
+import 'widgets/user_profile_model_bottom_sheet.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -31,7 +32,9 @@ class Dashboard extends StatelessWidget {
               decoration:
                   BoxDecoration(borderRadius: BorderRadius.circular(10)),
               child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    UserProfileScreen.buildShowModalBottomSheet(context);
+                  },
                   icon: const Image(image: AssetImage(tUserProfielImage))),
             )
           ],
@@ -152,8 +155,8 @@ class Dashboard extends StatelessWidget {
                             ),
                           )
                         ],
-                                          ),
-                      ))
+                      ),
+                    ))
                   ],
                 ),
 
