@@ -31,6 +31,6 @@ class CustomerController extends GetxController {
   // Get phoneNo from user and pass it to Auth Repository for firebase Authentication
   void createCustomer(CustomerModel customer) {
     customerRepo.createCustomer(customer);
-    Get.to(() => const Dashboard());
+    // Get.to(() => const Dashboard());
   }
 }

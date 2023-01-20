@@ -22,9 +22,9 @@ class ShipmentScreen extends StatelessWidget {
             child: Column(
               children: const [
                 FormHeaderWidget(
-                  image: tWelcomeScreenImage, 
-                  title: tSignup, 
-                  subTitle: tSignUpSubTitle,
+                  image: tShippingImage, 
+                  title: tShipmentScreenTitle, 
+                  subTitle: tShipmentScreenSubTile,
                   ),
                 ShipmentFormWidget(),
               ],

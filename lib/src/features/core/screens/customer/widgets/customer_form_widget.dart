@@ -89,7 +89,7 @@ class CustomerFormWidget extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  print("Information Saved");
+                  // print("Information Saved");
                   // if (_formKey.currentState!.validate()) {
                   //   SignUpController.instance.registerUser(controller.email.text.trim(),controller.password.text.trim());
                   //   SignUpController.instance

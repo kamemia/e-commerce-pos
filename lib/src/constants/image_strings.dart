@@ -30,3 +30,6 @@ const String tTopCourseImage2 = "assets/images/dashboard/dash-04.png";
 const String tCustomerIcon = "assets/images/dashboard/customer.png";
 const String tProductIcon = "assets/images/dashboard/products.png";
 const String tCustomer = "assets/images/dashboard/customer_image.png";
+const String tSaleScreenImage = "assets/images/dashboard/sale_image.png";
+// Shipping images
+const String tShippingImage = "assets/images/dashboard/shipment_image.png";

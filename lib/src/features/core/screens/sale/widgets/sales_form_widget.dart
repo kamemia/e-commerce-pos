@@ -1,6 +1,6 @@
-import 'package:commerce/src/features/authentication/controllers/signup_controller.dart';
-import 'package:commerce/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:commerce/src/features/core/controllers/sales_controller.dart';
+import 'package:commerce/src/features/core/screens/sale/widgets/dropdown_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
@@ -30,19 +30,18 @@ class SalesFormWidget extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: tFormHeight - 20,
+              height: tFormHeight,
             ),
             TextFormField(
               controller: controller.price,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
                 label: Text(tPrice),
-                
                 prefixIcon: Icon(Icons.monetization_on_outlined),
               ),
             ),
             const SizedBox(
-              height: tFormHeight - 20,
+              height: tFormHeight,
             ),
             TextFormField(
               controller: controller.quantity,
@@ -52,8 +51,12 @@ class SalesFormWidget extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: tFormHeight - 20,
+              height: tFormHeight,
             ),
+            // DropDown(),
+            // const SizedBox(
+            //   height: tFormHeight,
+            // ),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(

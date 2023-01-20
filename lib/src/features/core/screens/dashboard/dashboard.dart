@@ -59,6 +59,15 @@ class Dashboard extends StatelessWidget {
               ListTile(leading:const Icon(Icons.category_outlined), title: const Text("Products"), onTap: (){},),
               ListTile(leading:const Icon(Icons.settings), title: const Text("Settings"), onTap: (){},),
               ListTile(leading:const Icon(Icons.support_agent_outlined), title: const Text("Support"), onTap: (){},),
+              const Divider(height: 20),
+              ListTile(leading:
+              const Icon(Icons.logout_outlined), 
+              title: const Text("LOG OUT", style: TextStyle(fontWeight: FontWeight.bold) ),
+              textColor: tLogoutColor, 
+              iconColor: tLogoutColor, 
+              
+              onTap: (){},
+              ),
             ],
           ),
         ),
