@@ -24,6 +24,11 @@ class SignUpFormWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
+              validator: (s) {
+              if (s!.isEmpty) {
+              return "This is a required field";
+              }
+            },
               controller: controller.fullName,
               decoration: const InputDecoration(
                 label: Text(tFullName),
@@ -31,17 +36,18 @@ class SignUpFormWidget extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: tFormHeight - 20,
+              height: tFormHeight -10,
             ),
             TextFormField(
               controller: controller.email,
               decoration: const InputDecoration(
                 label: Text(tEmail),
+                hintText: tEmailHint,
                 prefixIcon: Icon(Icons.email_outlined),
               ),
             ),
             const SizedBox(
-              height: tFormHeight - 20,
+              height: tFormHeight - 10,
             ),
             TextFormField(
               controller: controller.phoneNo,
@@ -58,7 +64,7 @@ class SignUpFormWidget extends StatelessWidget {
               // },
             ),
             const SizedBox(
-              height: tFormHeight - 20,
+              height: tFormHeight - 10,
             ),
             // TextFormField(
             //   controller: controller.password,
@@ -69,7 +75,7 @@ class SignUpFormWidget extends StatelessWidget {
             // ),
             PasswordField(),
             const SizedBox(
-              height: tFormHeight - 20,
+              height: tFormHeight - 10,
             ),
             SizedBox(
               width: double.infinity,

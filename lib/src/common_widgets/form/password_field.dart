@@ -32,7 +32,7 @@ class PasswordFieldState extends State<PasswordField> {
         onPressed: () => setState(() => obscurePassword = !obscurePassword), 
         icon: Icon(
           obscurePassword ? Icons.visibility : Icons.visibility_off,
-          // color: Colors.blue,
+          color: Colors.grey,
         ),
       ),
       ),

@@ -5,7 +5,9 @@ import 'package:commerce/src/constants/colors.dart';
 import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
+import 'package:commerce/src/features/authentication/screens/login/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'widgets/signup_form_widget.dart';
 
@@ -27,10 +29,11 @@ class SignUpScreen extends StatelessWidget {
                   subTitle: tSignUpSubTitle,
                 ),
                 const SignUpFormWidget(),
+
                 Column(
                   children: [
                     const Text("OR"),
-                    const SizedBox(height: tFormHeight - 20),
+                    const SizedBox(height: tFormHeight -20),
                     SizedBox(
                       width: double.infinity,
                       child: OutlinedButton.icon(
@@ -40,7 +43,7 @@ class SignUpScreen extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {}, 
+                      onPressed: () => Get.to(()=> const LoginScreen()), 
                       child: Text.rich(
                         TextSpan(
                           children: [
