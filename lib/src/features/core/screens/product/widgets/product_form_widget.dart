@@ -21,47 +21,22 @@ class ProductFormWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
-              controller: controller.firstName,
+              controller: controller.title,
               decoration: const InputDecoration(
-                label: Text(tFirstName),
-                prefixIcon: Icon(Icons.person_outline_rounded),
+                label: Text(tSalesTitle),
+                prefixIcon: Icon(Icons.category_outlined),
               ),
             ),
             const SizedBox(
               height: tFormHeight - 20,
             ),
             TextFormField(
-              controller: controller.lastName,
+              controller: controller.quantity,
+              keyboardType: TextInputType.number,
               decoration: const InputDecoration(
-                label: Text(tLastName),
+                label: Text(tQuantity),
+                prefixIcon: Icon(Icons.numbers_outlined),
               ),
-            ),
-            const SizedBox(
-              height: tFormHeight -20,
-            ),
-            TextFormField(
-              controller: controller.email,
-              decoration: const InputDecoration(
-                label: Text(tEmail),
-                prefixIcon: Icon(Icons.email_outlined),
-              ),
-            ),
-            const SizedBox(
-              height: tFormHeight - 20,
-            ),
-            TextFormField(
-              controller: controller.phoneNo,
-              decoration: const InputDecoration(
-                label: Text(tPhoneNo),
-                prefixIcon: Icon(Icons.phone_outlined),
-              ),
-              // initialCountryCode: 'KE',
-              // onChanged: (phone) {
-              //   print(phone.completeNumber);
-              // },
-              // onCountryChanged: (country) {
-              //   print('Country changes to: ' + country.name);
-              // },
             ),
             const SizedBox(
               height: tFormHeight - 20,

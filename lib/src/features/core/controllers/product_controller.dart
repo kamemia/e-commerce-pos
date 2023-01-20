@@ -6,9 +6,10 @@ class ProductController extends GetxController {
   static ProductController get instance => Get.find();
 
   // TextField Controllers to get data from TextFields
+  final title = TextEditingController();
   final email = TextEditingController();
   final addresses = TextEditingController();
-  final firstName = TextEditingController();
+  final quantity = TextEditingController();
   final lastName = TextEditingController();
   final phoneNo = TextEditingController();
 

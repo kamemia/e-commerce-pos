@@ -84,3 +84,8 @@ const String tFirstName = "First name";
 const String tLastName = "Last Name";
 const String tAddress = "Addresses";
 const String tSave = "Save";
+
+// Custom sales screen - Text
+const String tSalesTitle = "Title";
+const String tPrice = "Price";
+const String tQuantity = "Quantity";

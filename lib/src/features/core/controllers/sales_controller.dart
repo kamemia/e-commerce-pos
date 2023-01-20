@@ -2,14 +2,13 @@ import 'package:commerce/src/repository/authentication_repository/authentication
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SignUpController extends GetxController {
-  static SignUpController get instance => Get.find();
+class SalesController extends GetxController {
+  static SalesController get instance => Get.find();
 
   // TextField Controllers to get data from TextFields
-  final email = TextEditingController();
-  final password = TextEditingController();
-  final fullName = TextEditingController();
-  final phoneNo = TextEditingController();
+  final title = TextEditingController();
+  final price = TextEditingController();
+  final quantity = TextEditingController();
 
   //Call this function from Desing & it will do the rest
   void registerUser(String email, String password) {
