@@ -21,7 +21,7 @@ class Dashboard extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          leading: const Icon(Icons.menu, color: Colors.black),
+          // leading: const Icon(Icons.menu, color: Colors.black),
           title: Text(tAppName, style: Theme.of(context).textTheme.headline4),
           centerTitle: true,
           elevation: 0,
@@ -39,6 +39,7 @@ class Dashboard extends StatelessWidget {
             )
           ],
         ),
+        drawer: Drawer(),
         body: SingleChildScrollView(
           
           child: Container(
