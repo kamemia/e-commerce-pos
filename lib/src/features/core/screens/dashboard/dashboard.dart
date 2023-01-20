@@ -21,10 +21,11 @@ class Dashboard extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          // leading: const Icon(Icons.menu, color: Colors.black),
+          // leading: Icon(Icons.menu, color: Colors.black),
           title: Text(tAppName, style: Theme.of(context).textTheme.headline4),
           centerTitle: true,
           elevation: 0,
+          iconTheme: const IconThemeData(color: Colors.black),
           backgroundColor: Colors.transparent,
           actions: [
             Container(
@@ -39,7 +40,28 @@ class Dashboard extends StatelessWidget {
             )
           ],
         ),
-        drawer: Drawer(),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(
+                padding: const EdgeInsets.all(0),
+                child: Container(
+                  color: tPrimaryColor,
+                  child: Column(
+                    
+                  ),
+                  ),
+              ),
+
+              ListTile(leading:const Icon(Icons.home), title: const Text("Home"), onTap: (){},),
+              ListTile(leading:const Icon(Icons.shopping_cart_checkout), title: const Text("Orders"), onTap: (){},),
+              ListTile(leading:const Icon(Icons.person_outline), title: const Text("Customers"), onTap: (){},),
+              ListTile(leading:const Icon(Icons.category_outlined), title: const Text("Products"), onTap: (){},),
+              ListTile(leading:const Icon(Icons.settings), title: const Text("Settings"), onTap: (){},),
+              ListTile(leading:const Icon(Icons.support_agent_outlined), title: const Text("Support"), onTap: (){},),
+            ],
+          ),
+        ),
         body: SingleChildScrollView(
           
           child: Container(

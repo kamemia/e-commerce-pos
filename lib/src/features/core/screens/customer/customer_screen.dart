@@ -18,9 +18,9 @@ class CustomerScreen extends StatelessWidget {
             child: Column(
               children: const [
                 FormHeaderWidget(
-                  image: tWelcomeScreenImage, 
-                  title: tSignup, 
-                  subTitle: tSignUpSubTitle,
+                  image: tCustomer, 
+                  title: tNewCustomerTitle, 
+                  subTitle: tNewCustomerSubTitle,
                   ),
                 CustomerFormWidget(),
               ],
