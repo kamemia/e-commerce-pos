@@ -8,6 +8,12 @@ class UserProfileScreen {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
       builder: (context) => Container(
         padding: const EdgeInsets.all(tDefaultSize),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            
+          ],
+        ),
       ),
     );
   }

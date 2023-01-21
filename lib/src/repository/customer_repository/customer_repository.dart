@@ -8,6 +8,8 @@ class CustomerRepository extends GetxController {
 
   final _db = FirebaseFirestore.instance;
 
+  /// Store customer in firestore
+
   createCustomer(CustomerModel customer) async {
     await _db
         .collection("Customers")
@@ -25,5 +27,21 @@ class CustomerRepository extends GetxController {
           colorText: Colors.red);
       print(error.toString());
     });
+  }
+
+  /// Step 2 Fetch All Customers or Customer details
+  Future<CustomerModel> getCustomerDetails(String email) async {
+    final snapshot =
+        await _db.collection("Customer").where("Email", isEqualTo: email).get();
+    final customerData =
+        snapshot.docs.map((e) => CustomerModel.fromSnapshot(e)).single;
+    return customerData;
+  }
+
+  Future<List<CustomerModel>> allUser() async {
+    final snapshot = await _db.collection("Customers").get();
+    final customerData =
+        snapshot.docs.map((e) => CustomerModel.fromSnapshot(e)).toList();
+    return customerData;
   }
 }
