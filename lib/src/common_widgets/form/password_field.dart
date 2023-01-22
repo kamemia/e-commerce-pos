@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 import '../../features/authentication/controllers/login_controller.dart';
 
+// ignore: use_key_in_widget_constructors
 class PasswordField extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => PasswordFieldState();
@@ -20,6 +21,7 @@ class PasswordFieldState extends State<PasswordField> {
         if (s!.isEmpty) {
           return "This is a required field";
         }
+        return null;
       },
       obscureText: obscurePassword,
       keyboardType: TextInputType.visiblePassword,
