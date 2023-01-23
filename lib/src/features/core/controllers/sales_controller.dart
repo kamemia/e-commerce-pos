@@ -7,8 +7,8 @@ class SalesController extends GetxController {
 
   // TextField Controllers to get data from TextFields
   final title = TextEditingController();
-  final price = TextEditingController();
-  final quantity = TextEditingController();
+  final price = TextEditingController(text: "0");
+  final quantity = TextEditingController(text: "0");
 
   //Call this function from Desing & it will do the rest
   void registerUser(String email, String password) {

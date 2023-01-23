@@ -6,10 +6,19 @@ import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
 import 'package:get/get.dart';
 
-class SalesFormWidget extends StatelessWidget {
+class SalesFormWidget extends StatefulWidget {
   const SalesFormWidget({
     Key? key,
   }) : super(key: key);
+
+  @override
+  State<SalesFormWidget> createState() => _SalesFormWidgetState();
+}
+
+class _SalesFormWidgetState extends State<SalesFormWidget> {
+  var num1 = 0, num2 = 0, sum = 0;
+  final price = TextEditingController();
+  final quantity = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -53,10 +62,19 @@ class SalesFormWidget extends StatelessWidget {
             const SizedBox(
               height: tFormHeight,
             ),
+            SizedBox(
+              height: 20,
+              child: Text(
+              'Total is: ${quantity.text + price.text}',
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            ),
+            ),
             // DropDown(),
             // const SizedBox(
             //   height: tFormHeight,
             // ),
+            const SizedBox(height: tFormHeight),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
