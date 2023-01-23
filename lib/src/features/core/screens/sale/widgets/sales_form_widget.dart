@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:commerce/src/features/core/controllers/sales_controller.dart';
+import 'package:commerce/src/features/core/screens/dashboard/dashboard.dart';
 import 'package:commerce/src/features/core/screens/sale/widgets/dropdown_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:commerce/src/constants/sizes.dart';
@@ -16,9 +17,9 @@ class SalesFormWidget extends StatefulWidget {
 }
 
 class _SalesFormWidgetState extends State<SalesFormWidget> {
-  var num1 = 0, num2 = 0, sum = 0;
-  final price = TextEditingController();
-  final quantity = TextEditingController();
+  double fprice = 0, fquantity = 0, result = 0;
+  final fpricecontroller = TextEditingController();
+  final fquantitycontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class _SalesFormWidgetState extends State<SalesFormWidget> {
         key: _formKey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+          children: <Widget>[
             TextFormField(
               controller: controller.title,
               decoration: const InputDecoration(
@@ -42,34 +43,41 @@ class _SalesFormWidgetState extends State<SalesFormWidget> {
               height: tFormHeight,
             ),
             TextFormField(
-              controller: controller.price,
+              controller: fpricecontroller,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
                 label: Text(tPrice),
                 prefixIcon: Icon(Icons.monetization_on_outlined),
               ),
+              onChanged: (value) {
+                fprice = double.parse(value);
+                result = fprice * fquantity;
+              },
             ),
             const SizedBox(
               height: tFormHeight,
             ),
             TextFormField(
-              controller: controller.quantity,
+              controller: fquantitycontroller,
+              keyboardType: TextInputType.number,
               decoration: const InputDecoration(
                 label: Text(tQuantity),
                 prefixIcon: Icon(Icons.numbers),
               ),
+              onChanged: (value) {
+                fquantity = double.parse(value);
+                result = fprice * fquantity;
+              },
             ),
             const SizedBox(
               height: tFormHeight,
             ),
-            SizedBox(
-              height: 20,
-              child: Text(
-              'Total is: ${int.parse(quantity.text) * int.parse(price.text)}',
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-            ),
+            // Text(
+            //   "Result: $result",
+            //   textAlign: TextAlign.center,
+            //   style: const TextStyle(backgroundColor: Colors.blueGrey,),
+            //   ),
+
             // DropDown(),
             // const SizedBox(
             //   height: tFormHeight,
@@ -79,7 +87,8 @@ class _SalesFormWidgetState extends State<SalesFormWidget> {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  print("Information Saved");
+                  Get.to(() => const Dashboard());
+                  // print("Information Saved");
                   // if (_formKey.currentState!.validate()) {
                   //   SignUpController.instance.registerUser(controller.email.text.trim(),controller.password.text.trim());
                   //   SignUpController.instance
@@ -87,7 +96,7 @@ class _SalesFormWidgetState extends State<SalesFormWidget> {
                   //   Get.to(() => const OTPScreen());
                   // }
                 },
-                child: Text(tSave.toUpperCase()),
+                child: Text("CHECKOUT: $result"),
               ),
             )
           ],

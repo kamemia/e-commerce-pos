@@ -91,6 +91,7 @@ const String tNewCustomerSubTitle = "Get to add new customers to the system";
 const String tSalesTitle = "Title";
 const String tPrice = "Price";
 const String tQuantity = "Quantity";
+const String tCheckout = "Checkout";
 
 // Custom shipment screen - Text
 const String tShipmentScreenTitle = "Make a shipment";
