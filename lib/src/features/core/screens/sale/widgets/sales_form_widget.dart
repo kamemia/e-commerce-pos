@@ -65,7 +65,7 @@ class _SalesFormWidgetState extends State<SalesFormWidget> {
             SizedBox(
               height: 20,
               child: Text(
-              'Total is: ${quantity.text + price.text}',
+              'Total is: ${int.parse(quantity.text) * int.parse(price.text)}',
               textAlign: TextAlign.center,
               style: const TextStyle(fontWeight: FontWeight.bold),
             ),
