@@ -36,21 +36,25 @@ class UpdateCustomerScreen extends StatelessWidget {
                   itemBuilder: (c, index) {
                     return Column(
                       children: [
-                        ListTile(
-                          iconColor: Colors.blue,
-                          tileColor: Colors.blue.withOpacity(0.1),
-                          leading: const Icon(LineAwesomeIcons.user_1),
-                          title:
-                              Text("Name: ${snapshot.data![index].firstName}"),
-                          subtitle: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("${snapshot.data![index].phoneNo}"),
-                              Text("${snapshot.data![index].email}"),
-                            ],
+                        SizedBox(
+                          height: 70,
+                          child: ListTile(
+                            
+                            iconColor: Colors.blue,
+                            tileColor: Colors.blue.withOpacity(0.1),
+                            leading: const Icon(LineAwesomeIcons.user_1),
+                            title:
+                                Text("Name: ${snapshot.data![index].firstName}"),
+                            subtitle: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("${snapshot.data![index].phoneNo}"),
+                                Text("${snapshot.data![index].email}"),
+                              ],
+                            ),
                           ),
                         ),
-                        const SizedBox(height: 10)
+                        const SizedBox(height: 20)
                       ],
                     );
                   },
