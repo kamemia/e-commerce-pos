@@ -1,6 +1,6 @@
+import 'package:commerce/src/features/authentication/models/customer_model.dart';
 import 'package:commerce/src/repository/authentication_repository/authentication_repository.dart';
 import 'package:commerce/src/repository/customer_repository/customer_repository.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CustomerProfileController extends GetxController {
@@ -18,5 +18,9 @@ class CustomerProfileController extends GetxController {
     } else {
       Get.snackbar("Error", "Login to continue");
     }
+  }
+
+  Future<List<CustomerModel>> getAllCustomer() async {
+    return await _customerRepo.allCustomer();
   }
 }

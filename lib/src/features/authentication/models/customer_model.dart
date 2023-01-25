@@ -16,9 +16,9 @@ class CustomerModel {
 
   const CustomerModel({
     this.id,
+    required this.email,
     required this.firstName,
     required this.lastName,
-    required this.email,
     required this.phoneNo,
     required this.addresses,
   });
@@ -39,11 +39,11 @@ class CustomerModel {
     final data = document.data()!;
     return CustomerModel(
       id: document.id,
-        firstName: data["firstName"],
-        lastName: data["lastName"],
-        email: data["email"],
-        phoneNo: data["phoneNo"],
-        addresses: data["addresses"]
+        email: data["Email"],
+        firstName: data["FirstName"],
+        lastName: data["LastName"],
+        phoneNo: data["PhoneNo"],
+        addresses: data["Address"]
     );
   }
 }

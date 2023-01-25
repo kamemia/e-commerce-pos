@@ -2,6 +2,7 @@ import 'package:commerce/src/constants/colors.dart';
 import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
+import 'package:commerce/src/features/core/screens/customer/customer.dart';
 import 'package:commerce/src/features/core/screens/customer/customer_screen.dart';
 import 'package:commerce/src/features/core/screens/dashboard/dashboard.dart';
 import 'package:commerce/src/features/core/screens/product/product_screen.dart';
@@ -176,7 +177,10 @@ class ViewCustomers extends StatelessWidget {
                   Expanded(
                       child: InkWell(
                     onTap: () {
-                      
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const UpdateCustomerScreen()),
+                  );
                     },
                     child: Column(
                       children: [

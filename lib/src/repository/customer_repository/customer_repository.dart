@@ -38,10 +38,12 @@ class CustomerRepository extends GetxController {
     return customerData;
   }
 
-  Future<List<CustomerModel>> allUser() async {
+  Future<List<CustomerModel>> allCustomer() async {
     final snapshot = await _db.collection("Customers").get();
     final customerData =
         snapshot.docs.map((e) => CustomerModel.fromSnapshot(e)).toList();
     return customerData;
   }
+
+  
 }

@@ -29,12 +29,7 @@ class CustomerFormWidget extends StatelessWidget {
                 label: Text(tFirstName),
                 prefixIcon: Icon(Icons.person_outline_rounded),
               ),
-              // validator: (value) {
-              //   if (value == null || value.isEmpty) {
-              //     return 'Please enter your first name';
-              //   }
-              // return null;
-              // },
+              
             ),
             const SizedBox(
               height: tFormHeight - 20,
