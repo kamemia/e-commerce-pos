@@ -24,26 +24,40 @@ class CustomerFormWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
+              validator: (s) {
+                if (s!.isEmpty) {
+                  return "This is a required field";
+                }
+              },
               controller: controller.firstName,
               decoration: const InputDecoration(
                 label: Text(tFirstName),
                 prefixIcon: Icon(Icons.person_outline_rounded),
               ),
-              
             ),
             const SizedBox(
               height: tFormHeight - 20,
             ),
             TextFormField(
+              validator: (s) {
+                if (s!.isEmpty) {
+                  return "This is a required field";
+                }
+              },
               controller: controller.lastName,
               decoration: const InputDecoration(
                 label: Text(tLastName),
               ),
             ),
             const SizedBox(
-              height: tFormHeight -20,
+              height: tFormHeight - 20,
             ),
             TextFormField(
+              validator: (s) {
+                if (s!.isEmpty) {
+                  return "This is a required field";
+                }
+              },
               controller: controller.email,
               decoration: const InputDecoration(
                 label: Text(tEmail),
@@ -54,6 +68,11 @@ class CustomerFormWidget extends StatelessWidget {
               height: tFormHeight - 20,
             ),
             TextFormField(
+              validator: (s) {
+                if (s!.isEmpty) {
+                  return "This is a required field";
+                }
+              },
               controller: controller.phoneNo,
               decoration: const InputDecoration(
                 label: Text(tPhoneNo),
@@ -85,20 +104,16 @@ class CustomerFormWidget extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {
                   // print("Information Saved");
-                  // if (_formKey.currentState!.validate()) {
-                  //   SignUpController.instance.registerUser(controller.email.text.trim(),controller.password.text.trim());
-                  //   SignUpController.instance
-                  //       .phoneAuthentication(controller.phoneNo.text.trim());
-                  //   Get.to(() => const OTPScreen());
-                  // }
-                  final customer = CustomerModel(
-                    firstName: controller.firstName.text.trim(),
-                    lastName: controller.lastName.text.trim(),
-                    email: controller.email.text.trim(),
-                    phoneNo: controller.phoneNo.text.trim(),
-                    addresses: controller.addresses.text.trim(),
-                  );
-                  CustomerController.instance.createCustomer(customer);
+                  if (_formKey.currentState!.validate()) {
+                    final customer = CustomerModel(
+                      firstName: controller.firstName.text.trim(),
+                      lastName: controller.lastName.text.trim(),
+                      email: controller.email.text.trim(),
+                      phoneNo: controller.phoneNo.text.trim(),
+                      addresses: controller.addresses.text.trim(),
+                    );
+                    CustomerController.instance.createCustomer(customer);
+                  }
                 },
                 child: Text(tSave.toUpperCase()),
               ),

@@ -22,6 +22,12 @@ class ProductFormWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
+              validator: (s) {
+                if (s!.isEmpty) {
+                  return "This is a required field";
+                }
+                return null;
+              },
               controller: controller.title,
               decoration: const InputDecoration(
                 label: Text(tSalesTitle),
@@ -49,6 +55,12 @@ class ProductFormWidget extends StatelessWidget {
               height: tFormHeight - 20,
             ),
             TextFormField(
+              validator: (s) {
+                if (s!.isEmpty) {
+                  return "This is a required field";
+                }
+                return null;
+              },
               controller: controller.price,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
@@ -76,9 +88,7 @@ class ProductFormWidget extends StatelessWidget {
             TextFormField(
               controller: controller.barcode,
               keyboardType: const TextInputType.numberWithOptions(),
-              decoration: const InputDecoration(
-                label: Text("Barcode")
-              ),
+              decoration: const InputDecoration(label: Text("Barcode")),
             ),
             const SizedBox(
               height: tFormHeight - 20,
@@ -88,36 +98,36 @@ class ProductFormWidget extends StatelessWidget {
               height: tFormHeight - 20,
             ),
             TextFormField(
+              validator: (s) {
+                if (s!.isEmpty) {
+                  return "This is a required field";
+                }
+                return null;
+              },
               controller: controller.quantity,
               keyboardType: const TextInputType.numberWithOptions(),
               decoration: const InputDecoration(
-                label: Text("Quantity"),
-                prefixIcon: Icon(Icons.numbers_outlined)
-              ),
+                  label: Text("Quantity"),
+                  prefixIcon: Icon(Icons.numbers_outlined)),
             ),
             const SizedBox(
-              height: tFormHeight -20,
+              height: tFormHeight - 20,
             ),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  // print("Information Saved");
-                  // if (_formKey.currentState!.validate()) {
-                  //   SignUpController.instance.registerUser(controller.email.text.trim(),controller.password.text.trim());
-                  //   SignUpController.instance
-                  //       .phoneAuthentication(controller.phoneNo.text.trim());
-                  //   Get.to(() => const OTPScreen());
-                  // }
-                  final product = ProductModel(
-                    title: controller.title.text.trim(),
-                    description: controller.description.text.trim(),
-                    price: controller.price.text.trim(),
-                    sku: controller.sku.text.trim(),
-                    barcode: controller.barcode.text.trim(),
-                    quantity: controller.quantity.text.trim(),
-                  );
-                  ProductController.instance.createCustomer(product);
+                  if (_formKey.currentState!.validate()) {
+                    final product = ProductModel(
+                      title: controller.title.text.trim(),
+                      description: controller.description.text.trim(),
+                      price: controller.price.text.trim(),
+                      sku: controller.sku.text.trim(),
+                      barcode: controller.barcode.text.trim(),
+                      quantity: controller.quantity.text.trim(),
+                    );
+                    ProductController.instance.createCustomer(product);
+                  }
                 },
                 child: Text("Add Product".toUpperCase()),
               ),

@@ -39,6 +39,11 @@ class SignUpFormWidget extends StatelessWidget {
               height: tFormHeight -10,
             ),
             TextFormField(
+              validator: (s) {
+              if (s!.isEmpty) {
+              return "This is a required field";
+              }
+            },
               controller: controller.email,
               decoration: const InputDecoration(
                 label: Text(tEmail),
@@ -50,6 +55,11 @@ class SignUpFormWidget extends StatelessWidget {
               height: tFormHeight - 10,
             ),
             TextFormField(
+              validator: (s) {
+              if (s!.isEmpty) {
+              return "This is a required field";
+              }
+            },
               controller: controller.phoneNo,
               decoration: const InputDecoration(
                 label: Text(tPhoneNo),
