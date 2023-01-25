@@ -1,6 +1,4 @@
 import 'package:commerce/src/features/authentication/models/customer_model.dart';
-import 'package:commerce/src/features/core/screens/dashboard/dashboard.dart';
-import 'package:commerce/src/repository/authentication_repository/authentication_repository.dart';
 import 'package:commerce/src/repository/customer_repository/customer_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

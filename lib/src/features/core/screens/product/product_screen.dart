@@ -1,7 +1,6 @@
 import 'package:commerce/src/common_widgets/form/form_header_widget.dart';
 import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';
-import 'package:commerce/src/constants/text_strings.dart';
 import 'package:commerce/src/features/core/screens/product/widgets/product_form_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -19,8 +18,8 @@ class ProductScreen extends StatelessWidget {
             children: const [
               FormHeaderWidget(
                 image: tWelcomeScreenImage,
-                title: tSignup,
-                subTitle: tSignUpSubTitle,
+                title: "Add products",
+                subTitle: "Get to add your new products for sale and inventory keeping",
               ),
               ProductFormWidget(),
             ],

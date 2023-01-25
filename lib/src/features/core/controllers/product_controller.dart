@@ -1,4 +1,5 @@
-import 'package:commerce/src/repository/authentication_repository/authentication_repository.dart';
+import 'package:commerce/src/features/authentication/models/product_model.dart';
+import 'package:commerce/src/repository/product_repository/product_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,11 +8,13 @@ class ProductController extends GetxController {
 
   // TextField Controllers to get data from TextFields
   final title = TextEditingController();
-  final email = TextEditingController();
-  final addresses = TextEditingController();
+  final description = TextEditingController();
   final quantity = TextEditingController();
-  final lastName = TextEditingController();
-  final phoneNo = TextEditingController();
+  final sku = TextEditingController();
+  final price = TextEditingController();
+  final barcode = TextEditingController();
+
+  final productRepo = Get.put(ProductRepository());
 
   //Call this function from Desing & it will do the rest
   // void registerUser(String email, String password) {
@@ -28,4 +31,8 @@ class ProductController extends GetxController {
   // void phoneAuthentication(String phoneNo) {
   //   AuthenticationRepository.instance.phoneAuthentication(phoneNo);
   // }
+  void createCustomer(ProductModel customer) {
+    productRepo.createCustomer(customer);
+    // Get.to(() => const Dashboard());
+  }
 }

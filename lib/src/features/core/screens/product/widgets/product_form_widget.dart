@@ -1,3 +1,4 @@
+import 'package:commerce/src/features/authentication/models/product_model.dart';
 import 'package:commerce/src/features/core/controllers/product_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:commerce/src/constants/sizes.dart';
@@ -31,39 +32,94 @@ class ProductFormWidget extends StatelessWidget {
               height: tFormHeight - 20,
             ),
             TextFormField(
-              controller: controller.quantity,
+              controller: controller.description,
+              keyboardType: TextInputType.multiline,
+              minLines: 1,
+              maxLines: 5,
+              decoration: const InputDecoration(
+                label: Text("Description"),
+                prefixIcon: Icon(Icons.description_outlined),
+              ),
+            ),
+            const SizedBox(
+              height: tFormHeight - 20,
+            ),
+            const Text("Price"),
+            const SizedBox(
+              height: tFormHeight - 20,
+            ),
+            TextFormField(
+              controller: controller.price,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
-                label: Text(tQuantity),
-                prefixIcon: Icon(Icons.numbers_outlined),
+                label: Text("Price"),
+                prefixIcon: Icon(Icons.monetization_on_outlined),
+              ),
+            ),
+            const SizedBox(
+              height: tFormHeight - 20,
+            ),
+            const Text("Inventory"),
+            const SizedBox(
+              height: tFormHeight - 20,
+            ),
+            TextFormField(
+              controller: controller.sku,
+              keyboardType: const TextInputType.numberWithOptions(),
+              decoration: const InputDecoration(
+                label: Text("SKU (Stock Keeping Unit)"),
               ),
             ),
             const SizedBox(
               height: tFormHeight - 20,
             ),
             TextFormField(
-              controller: controller.addresses,
+              controller: controller.barcode,
+              keyboardType: const TextInputType.numberWithOptions(),
               decoration: const InputDecoration(
-                label: Text(tAddress),
-                prefixIcon: Icon(Icons.location_city_outlined),
+                label: Text("Barcode")
               ),
             ),
             const SizedBox(
               height: tFormHeight - 20,
             ),
+            const Text("Quantity"),
+            const SizedBox(
+              height: tFormHeight - 20,
+            ),
+            TextFormField(
+              controller: controller.quantity,
+              keyboardType: const TextInputType.numberWithOptions(),
+              decoration: const InputDecoration(
+                label: Text("Quantity"),
+                prefixIcon: Icon(Icons.numbers_outlined)
+              ),
+            ),
+            const SizedBox(
+              height: tFormHeight -20,
+            ),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  print("Information Saved");
+                  // print("Information Saved");
                   // if (_formKey.currentState!.validate()) {
                   //   SignUpController.instance.registerUser(controller.email.text.trim(),controller.password.text.trim());
                   //   SignUpController.instance
                   //       .phoneAuthentication(controller.phoneNo.text.trim());
                   //   Get.to(() => const OTPScreen());
                   // }
+                  final product = ProductModel(
+                    title: controller.title.text.trim(),
+                    description: controller.description.text.trim(),
+                    price: controller.price.text.trim(),
+                    sku: controller.sku.text.trim(),
+                    barcode: controller.barcode.text.trim(),
+                    quantity: controller.quantity.text.trim(),
+                  );
+                  ProductController.instance.createCustomer(product);
                 },
-                child: Text(tSave.toUpperCase()),
+                child: Text("Add Product".toUpperCase()),
               ),
             )
           ],
