@@ -22,7 +22,7 @@ class UpdateCustomerScreen extends StatelessWidget {
             icon: const Icon(LineAwesomeIcons.angle_left)),
         title: Text("Customers", style: Theme.of(context).textTheme.headline2),
       ),
-      body: SingleChildScrollView(
+      body: Container(
           child: Container(
         padding: const EdgeInsets.all(tDefaultSize),
         child: FutureBuilder<List<CustomerModel>>(
@@ -37,9 +37,9 @@ class UpdateCustomerScreen extends StatelessWidget {
                     return Column(
                       children: [
                         SizedBox(
-                          height: 70,
+                          
                           child: ListTile(
-                            
+                            minVerticalPadding: 15,
                             iconColor: Colors.blue,
                             tileColor: Colors.blue.withOpacity(0.1),
                             leading: const Icon(LineAwesomeIcons.user_1),

@@ -25,4 +25,6 @@ class SalesController extends GetxController {
   void phoneAuthentication(String phoneNo) {
     AuthenticationRepository.instance.phoneAuthentication(phoneNo);
   }
+
+  getAllProduct() {}
 }

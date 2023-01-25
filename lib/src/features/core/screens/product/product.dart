@@ -1,8 +1,6 @@
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/features/core/controllers/product_profile_controller.dart';
-import 'package:commerce/src/repository/product_repository/product_repository.dart';
 import 'package:commerce/src/features/authentication/models/product_model.dart';
-import 'package:commerce/src/features/core/controllers/customer_profile_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
@@ -24,7 +22,7 @@ class UpdateProductScreen extends StatelessWidget {
             icon: const Icon(LineAwesomeIcons.angle_left)),
         title: Text("Products", style: Theme.of(context).textTheme.headline2),
       ),
-      body: SingleChildScrollView(
+      body: Container(
           child: Container(
         padding: const EdgeInsets.all(tDefaultSize),
         child: FutureBuilder<List<ProductModel>>(

@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:commerce/src/features/core/controllers/sales_controller.dart';
 import 'package:commerce/src/features/core/screens/dashboard/dashboard.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:commerce/src/features/core/screens/sale/widgets/dropdown_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:commerce/src/constants/sizes.dart';
@@ -69,6 +70,33 @@ class _SalesFormWidgetState extends State<SalesFormWidget> {
                 result = fprice * fquantity;
               },
             ),
+            const SizedBox(
+              height: tFormHeight,
+            ),
+            // StreamBuilder<QuerySnapshot>(
+            //   stream:
+            //       FirebaseFirestore.instance.collection("Products").snapshots(),
+            //   builder: (BuildContext context,
+            //       AsyncSnapshot<QuerySnapshot> snapshot) {
+            //     if (!snapshot.hasData) return const CircularProgressIndicator();
+            //     List<DropdownMenuItem> items = snapshot.data!.docs
+            //         .map((doc) => DropdownMenuItem(
+            //               child: Text(doc["Price"]),
+            //               // value: doc.documentID,
+            //             ))
+            //         .toList();
+            //     return DropdownButton(
+            //       items: items,
+            //       onChanged: (value) {
+            //         // Update the selected value in Firestore
+            //         FirebaseFirestore.instance
+            //             .collection("Products")
+            //             .doc(value);
+            //         // .updateData({"selected": true});
+            //       },
+            //     );
+            //   },
+            // ),
             const SizedBox(
               height: tFormHeight,
             ),
