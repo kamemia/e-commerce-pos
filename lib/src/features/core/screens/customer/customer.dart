@@ -1,7 +1,5 @@
 import 'package:commerce/src/constants/sizes.dart';
-import 'package:commerce/src/constants/text_strings.dart';
 import 'package:commerce/src/features/authentication/models/customer_model.dart';
-import 'package:commerce/src/features/core/controllers/customer_controller.dart';
 import 'package:commerce/src/features/core/controllers/customer_profile_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,11 +20,10 @@ class UpdateCustomerScreen extends StatelessWidget {
         leading: IconButton(
             onPressed: () => Get.back(),
             icon: const Icon(LineAwesomeIcons.angle_left)),
-        title:
-            Text("Edit Customer", style: Theme.of(context).textTheme.headline4),
+        title: Text("Customers", style: Theme.of(context).textTheme.headline2),
       ),
       body: SingleChildScrollView(
-        child: Container(
+          child: Container(
         padding: const EdgeInsets.all(tDefaultSize),
         child: FutureBuilder<List<CustomerModel>>(
           future: controller.getAllCustomer(),
@@ -47,10 +44,10 @@ class UpdateCustomerScreen extends StatelessWidget {
                               Text("Name: ${snapshot.data![index].firstName}"),
                           subtitle: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            // children: [
-                            //   Text(snapshot.data![index].phoneNo),
-                            //   Text(snapshot.data![index].email),
-                            // ],
+                            children: [
+                              Text("${snapshot.data![index].phoneNo}"),
+                              Text("${snapshot.data![index].email}"),
+                            ],
                           ),
                         ),
                         const SizedBox(height: 10)

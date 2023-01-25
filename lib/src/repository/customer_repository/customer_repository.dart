@@ -45,5 +45,10 @@ class CustomerRepository extends GetxController {
     return customerData;
   }
 
-  
+  Future<void> updateCustomerRecord(CustomerModel customer) async {
+    await _db
+        .collection("Customers")
+        .doc(customer.id)
+        .update(customer.toJson());
+  }
 }

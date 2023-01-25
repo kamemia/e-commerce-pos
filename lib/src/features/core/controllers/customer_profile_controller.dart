@@ -1,10 +1,18 @@
 import 'package:commerce/src/features/authentication/models/customer_model.dart';
 import 'package:commerce/src/repository/authentication_repository/authentication_repository.dart';
 import 'package:commerce/src/repository/customer_repository/customer_repository.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CustomerProfileController extends GetxController {
   static CustomerProfileController get instance => Get.find();
+
+  // Controllers
+  final email = TextEditingController();
+  final firstName = TextEditingController();
+  final lastName = TextEditingController();
+  final phoneNo = TextEditingController();
+  final address = TextEditingController();
 
   final _authRepo = Get.put(AuthenticationRepository());
   final _customerRepo = Get.put(CustomerRepository());
@@ -22,5 +30,9 @@ class CustomerProfileController extends GetxController {
 
   Future<List<CustomerModel>> getAllCustomer() async {
     return await _customerRepo.allCustomer();
+  }
+
+  updateRecord(CustomerModel customer) async {
+    await _customerRepo.updateCustomerRecord(customer);
   }
 }

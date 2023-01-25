@@ -42,7 +42,7 @@ class CustomerModel {
         email: data["Email"],
         firstName: data["FirstName"],
         lastName: data["LastName"],
-        phoneNo: data["PhoneNo"],
+        phoneNo: data["Phone"],
         addresses: data["Address"]
     );
   }
