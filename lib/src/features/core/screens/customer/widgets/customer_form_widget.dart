@@ -1,7 +1,5 @@
-import 'package:commerce/src/features/authentication/controllers/signup_controller.dart';
 import 'package:commerce/src/features/authentication/models/customer_model.dart';
 import 'package:commerce/src/features/core/controllers/customer_controller.dart';
-
 import 'package:flutter/material.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
@@ -78,13 +76,6 @@ class CustomerFormWidget extends StatelessWidget {
                 label: Text(tPhoneNo),
                 prefixIcon: Icon(Icons.phone_outlined),
               ),
-              // initialCountryCode: 'KE',
-              // onChanged: (phone) {
-              //   print(phone.completeNumber);
-              // },
-              // onCountryChanged: (country) {
-              //   print('Country changes to: ' + country.name);
-              // },
             ),
             const SizedBox(
               height: tFormHeight - 20,
@@ -103,7 +94,6 @@ class CustomerFormWidget extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  // print("Information Saved");
                   if (_formKey.currentState!.validate()) {
                     final customer = CustomerModel(
                       firstName: controller.firstName.text.trim(),

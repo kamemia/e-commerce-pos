@@ -4,12 +4,14 @@ import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
 import 'package:commerce/src/features/core/screens/customer/customer.dart';
 import 'package:commerce/src/features/core/screens/customer/customer_screen.dart';
+import 'package:commerce/src/features/core/screens/customer/view_customers.dart';
 import 'package:commerce/src/features/core/screens/dashboard/dashboard.dart';
-import 'package:commerce/src/features/core/screens/product/view_products.dart';
+import 'package:commerce/src/features/core/screens/product/product.dart';
+import 'package:commerce/src/features/core/screens/product/product_screen.dart';
 import 'package:flutter/material.dart';
 
-class ViewCustomers extends StatelessWidget {
-  const ViewCustomers({Key? key}) : super(key: key);
+class ViewProducts extends StatelessWidget {
+  const ViewProducts({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -53,17 +55,18 @@ class ViewCustomers extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.person_outline),
               title: const Text("Customers"),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ViewCustomers()),
+                  );
+              },
             ),
             ListTile(
               leading: const Icon(Icons.category_outlined),
               title: const Text("Products"),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const ViewProducts()),
-                  );
-              },
+              onTap: () {},
             ),
             ListTile(
               leading: const Icon(Icons.settings),
@@ -94,7 +97,7 @@ class ViewCustomers extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Text(tDashboardTitle, style: txtTheme.bodyText2),
-              Text("Customers", style: txtTheme.headline2),
+              Text("Products", style: txtTheme.headline2),
               const SizedBox(height: tDashboardPadding),
               // Container(
               //   decoration: const BoxDecoration(
@@ -141,7 +144,7 @@ class ViewCustomers extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const CustomerScreen()),
+                              builder: (context) => const ProductScreen()),
                         );
                       },
                       child: Container(
@@ -164,11 +167,11 @@ class ViewCustomers extends StatelessWidget {
                               ],
                             ),
                             const SizedBox(height: 20),
-                            Text(tCustomerTitle,
+                            Text(tProductsTitle,
                                 style: txtTheme.headline4,
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis),
-                            Text(tCustomerSubtitle,
+                            Text(tProductsSubTitle,
                                 style: txtTheme.bodyText2,
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis)
@@ -183,7 +186,7 @@ class ViewCustomers extends StatelessWidget {
                     onTap: () {
                     Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const UpdateCustomerScreen()),
+                    MaterialPageRoute(builder: (context) => const UpdateProductScreen()),
                   );
                     },
                     child: Column(
@@ -209,11 +212,11 @@ class ViewCustomers extends StatelessWidget {
                                 ],
                               ),
                               const SizedBox(height: 20),
-                              Text("Customers",
+                              Text("Products",
                                   style: txtTheme.headline4,
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis),
-                              Text("View Customers",
+                              Text("View Products",
                                   style: txtTheme.bodyText2,
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis)

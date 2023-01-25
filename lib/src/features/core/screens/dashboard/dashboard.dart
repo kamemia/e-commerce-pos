@@ -5,6 +5,7 @@ import 'package:commerce/src/constants/text_strings.dart';
 import 'package:commerce/src/features/core/screens/customer/customer_screen.dart';
 import 'package:commerce/src/features/core/screens/customer/view_customers.dart';
 import 'package:commerce/src/features/core/screens/product/product_screen.dart';
+import 'package:commerce/src/features/core/screens/product/view_products.dart';
 import 'package:commerce/src/features/core/screens/sale/sales_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -55,10 +56,10 @@ class Dashboard extends StatelessWidget {
                 leading: const Icon(Icons.home),
                 title: const Text("Home"),
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Dashboard()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => const Dashboard()),
+                  // );
                 },
               ),
               ListTile(
@@ -80,7 +81,13 @@ class Dashboard extends StatelessWidget {
               ListTile(
                 leading: const Icon(Icons.category_outlined),
                 title: const Text("Products"),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ViewProducts()),
+                  );
+                },
               ),
               ListTile(
                 leading: const Icon(Icons.settings),

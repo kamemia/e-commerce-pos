@@ -10,7 +10,7 @@ class ProductRepository extends GetxController {
 
   /// Store customer in firestore
 
-  createCustomer(ProductModel product) async {
+  createProduct(ProductModel product) async {
     await _db
         .collection("Products")
         .add(product.toJson())
@@ -30,15 +30,15 @@ class ProductRepository extends GetxController {
   }
 
   /// Step 2 Fetch All Customers or Customer details
-  Future<ProductModel> getCustomerDetails(String title) async {
+  Future<ProductModel> getProductDetails(String title) async {
     final snapshot =
         await _db.collection("Products").where("Title", isEqualTo: title).get();
-    final customerData =
+    final productData =
         snapshot.docs.map((e) => ProductModel.fromSnapshot(e)).single;
-    return customerData;
+    return productData;
   }
 
-  Future<List<ProductModel>> allUser() async {
+  Future<List<ProductModel>> allProduct() async {
     final snapshot = await _db.collection("Products").get();
     final productData =
         snapshot.docs.map((e) => ProductModel.fromSnapshot(e)).toList();

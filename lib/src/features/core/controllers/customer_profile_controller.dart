@@ -35,4 +35,6 @@ class CustomerProfileController extends GetxController {
   updateRecord(CustomerModel customer) async {
     await _customerRepo.updateCustomerRecord(customer);
   }
+
+  getAllProduct() {}
 }

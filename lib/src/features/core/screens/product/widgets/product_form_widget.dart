@@ -126,7 +126,7 @@ class ProductFormWidget extends StatelessWidget {
                       barcode: controller.barcode.text.trim(),
                       quantity: controller.quantity.text.trim(),
                     );
-                    ProductController.instance.createCustomer(product);
+                    ProductController.instance.createProduct(product);
                   }
                 },
                 child: Text("Add Product".toUpperCase()),

@@ -36,18 +36,18 @@ class ProductModel {
     };
   }
 
-  /// Step 1 - Map customer fetched from Firebase to CustomerModel
+  /// Step 1 - Map customer fetched from Firebase to ProductModel
   factory ProductModel.fromSnapshot(
       DocumentSnapshot<Map<String, dynamic>> document) {
     final data = document.data()!;
     return ProductModel(
         id: document.id,
-        title: data["title"],
-        description: data["description"],
-        price: data["price"],
-        sku: data["sku"],
-        barcode: data["barcode"],
-        quantity: data["quantity"]
+        title: data["Title"],
+        description: data["Description"],
+        price: data["Price"],
+        sku: data["Sku"],
+        barcode: data["Barcode"],
+        quantity: data["Quantity"]
         );
   }
 }

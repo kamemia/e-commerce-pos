@@ -51,4 +51,6 @@ class CustomerRepository extends GetxController {
         .doc(customer.id)
         .update(customer.toJson());
   }
+
+  getProductDetails(String email) {}
 }
