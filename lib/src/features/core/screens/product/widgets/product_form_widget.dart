@@ -5,10 +5,25 @@ import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
 import 'package:get/get.dart';
 
+
+class SKUGenerator {
+  static String generateSKU() {
+    String sku = "SKU-";
+    var now = new DateTime.now();
+    sku += now.year.toString() + now.month.toString() + now.day.toString();
+    sku += "-";
+    sku += now.millisecondsSinceEpoch.toString();
+    return sku;
+  }
+}
+
 class ProductFormWidget extends StatelessWidget {
   const ProductFormWidget({
     Key? key,
   }) : super(key: key);
+
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +69,7 @@ class ProductFormWidget extends StatelessWidget {
             const SizedBox(
               height: tFormHeight - 20,
             ),
+            
             TextFormField(
               validator: (s) {
                 if (s!.isEmpty) {
@@ -75,6 +91,7 @@ class ProductFormWidget extends StatelessWidget {
             const SizedBox(
               height: tFormHeight - 20,
             ),
+            
             TextFormField(
               controller: controller.sku,
               keyboardType: const TextInputType.numberWithOptions(),
@@ -82,6 +99,24 @@ class ProductFormWidget extends StatelessWidget {
                 label: Text("SKU (Stock Keeping Unit)"),
               ),
             ),
+            const SizedBox(
+              height: tFormHeight - 10,
+            ),
+            // SizedBox(
+            //   width: double.infinity,
+            //   child: ElevatedButton(
+
+            //     onPressed: () async {
+            //     String sku = SKUGenerator.generateSKU();
+            //     // await _firestore.collection('items').document(sku).setData({
+            //     //   'sku': sku,
+            //     //   'created_at': Timestamp.now(),
+            //     // }
+            //     print('SKU $sku added to Firestore');
+            //   },
+            //   child: const Text('Generate SKU'),
+            //   ),
+            // ),
             const SizedBox(
               height: tFormHeight - 20,
             ),
@@ -138,3 +173,5 @@ class ProductFormWidget extends StatelessWidget {
     );
   }
 }
+
+
