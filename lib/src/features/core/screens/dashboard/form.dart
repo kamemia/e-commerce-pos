@@ -7,16 +7,6 @@ import 'package:commerce/src/constants/text_strings.dart';
 import 'package:get/get.dart';
 
 
-class SKUGenerator {
-  static String generateSKU() {
-    String sku = "SKU-";
-    var now = new DateTime.now();
-    sku += now.year.toString() + now.month.toString() + now.day.toString();
-    sku += "-";
-    sku += now.millisecondsSinceEpoch.toString();
-    return sku;
-  }
-}
 
 class ProductFormWidget extends StatelessWidget {
   const ProductFormWidget({
@@ -54,7 +44,9 @@ class ProductFormWidget extends StatelessWidget {
               height: tFormHeight - 20,
             ),
             TextFormField(
-              controller: controller.description,
+              onChanged: ((value) {
+                
+              }),
               keyboardType: TextInputType.multiline,
               minLines: 1,
               maxLines: 5,
