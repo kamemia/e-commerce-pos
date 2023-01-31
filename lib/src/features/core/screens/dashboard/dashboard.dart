@@ -2,12 +2,15 @@ import 'package:commerce/src/constants/colors.dart';
 import 'package:commerce/src/constants/image_strings.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
+import 'package:commerce/src/features/core/screens/cart/cart_screen.dart';
+import 'package:commerce/src/features/core/screens/cart/catalogue_screen.dart';
 import 'package:commerce/src/features/core/screens/customer/customer_screen.dart';
 import 'package:commerce/src/features/core/screens/customer/view_customers.dart';
 import 'package:commerce/src/features/core/screens/product/product_screen.dart';
 import 'package:commerce/src/features/core/screens/product/view_products.dart';
 import 'package:commerce/src/features/core/screens/sale/sales_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../discount/discount_screen.dart';
 import '../shipment/shipment_screen.dart';
@@ -265,7 +268,7 @@ class Dashboard extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const SalesScreen()),
+                                builder: (context) =>  SalesScreen(index:1)),
                           );
                         },
                         child: Container(
@@ -429,6 +432,16 @@ class Dashboard extends StatelessWidget {
                     //   )
                     //   )
                   ],
+                ),
+                const SizedBox(
+                  height: tFormHeight,
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () => Get.to(() => const CartScreen()),
+                        child: const Text('Go to Cart'),
+                  ),
                 ),
               ],
             ),

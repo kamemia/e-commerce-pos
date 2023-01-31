@@ -31,8 +31,8 @@ class ProductController extends GetxController {
   // void phoneAuthentication(String phoneNo) {
   //   AuthenticationRepository.instance.phoneAuthentication(phoneNo);
   // }
-  void createProduct(ProductModel customer) {
-    productRepo.createProduct(customer);
+  void createProduct(Product product) {
+    productRepo.createProduct(product);
     // Get.to(() => const Dashboard());
   }
 }

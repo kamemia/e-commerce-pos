@@ -141,7 +141,7 @@ class ProductFormWidget extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    final product = ProductModel(
+                    final product = Product(
                       title: controller.title.text.trim(),
                       description: controller.description.text.trim(),
                       price: controller.price.text.trim(),

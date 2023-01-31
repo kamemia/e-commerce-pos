@@ -29,7 +29,7 @@ class ProductProfileController extends GetxController {
     }
   }
 
-  Future<List<ProductModel>> getAllProduct() async {
+  Future<List<Product>> getAllProduct() async {
     return await _productRepo.allProduct();
   }
 

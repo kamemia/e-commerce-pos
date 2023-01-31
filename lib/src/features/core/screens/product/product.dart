@@ -25,7 +25,7 @@ class UpdateProductScreen extends StatelessWidget {
       body: Container(
           child: Container(
         padding: const EdgeInsets.all(tDefaultSize),
-        child: FutureBuilder<List<ProductModel>>(
+        child: FutureBuilder<List<Product>>(
           future: controller.getAllProduct(),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {

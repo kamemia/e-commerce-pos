@@ -6,7 +6,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class ProductModel {
+class Product {
   final String? id;
   final String? title;
   final String? description;
@@ -15,7 +15,7 @@ class ProductModel {
   final String? barcode;
   final String? quantity;
 
-  const ProductModel({
+  const Product({
     this.id,
     required this.title,
     required this.description,
@@ -24,6 +24,18 @@ class ProductModel {
     required this.barcode,
     required this.quantity,
   });
+  
+  // static Product fromSnapshot(DocumentSnapshot snap) {
+  //   Product product = Product(
+  //     title: snap['Title'],
+  //     price: snap['Price'],
+  //     description: snap['Description'],
+  //     barcode: snap['Barcode'],
+  //     sku: snap['Sku'],
+  //     quantity: snap['Quantity']
+  //   );
+  //   return product;
+  // }
 
   toJson() {
     return {
@@ -37,10 +49,10 @@ class ProductModel {
   }
 
   /// Step 1 - Map customer fetched from Firebase to ProductModel
-  factory ProductModel.fromSnapshot(
+  factory Product.fromSnapshot(
       DocumentSnapshot<Map<String, dynamic>> document) {
     final data = document.data()!;
-    return ProductModel(
+    return Product(
         id: document.id,
         title: data["Title"],
         description: data["Description"],
