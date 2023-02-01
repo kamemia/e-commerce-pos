@@ -9,10 +9,10 @@ class CartTotal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(
-      () => SingleChildScrollView(
-          // padding: const EdgeInsets.symmetric(horizontal: 5),
+      () => Container(
+          padding: const EdgeInsets.symmetric(horizontal: 75),
           child: Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
                 'Total',
