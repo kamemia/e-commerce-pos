@@ -268,7 +268,7 @@ class Dashboard extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>  SalesScreen(index:1)),
+                                builder: (context) =>  const SalesScreen()),
                           );
                         },
                         child: Container(
@@ -390,11 +390,11 @@ class Dashboard extends StatelessWidget {
                                 ],
                               ),
                               const SizedBox(height: 20),
-                              Text(tShipTitle,
+                              Text('Sale',
                                   style: txtTheme.headline4,
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis),
-                              Text(tShipSubTitle,
+                              Text('Make a sale from existing products',
                                   style: txtTheme.bodyText2,
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis)

@@ -1,3 +1,4 @@
+import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/features/core/screens/cart/cart_screen.dart';
 import 'package:commerce/src/features/core/screens/cart/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -12,12 +13,18 @@ class CatalogScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Catalog")),
       body: SafeArea(
+        
         child: Column(
+        
           children: [
             CatalogProducts(),
-            ElevatedButton(
-              onPressed: () => Get.to(() => const CartScreen()),
-              child: const Text('Go to Cart'),
+            SizedBox(
+              
+              width: 90,
+              child: ElevatedButton(
+                onPressed: () => Get.to(() => const CartScreen()),
+                child: const Text('Go to Cart'),
+              ),
             ),
           ],
         ),

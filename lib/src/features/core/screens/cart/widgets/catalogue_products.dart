@@ -50,9 +50,9 @@ class CatalogProductCard extends StatelessWidget {
           //   ),
           // ),
           const SizedBox(width: 20),
-          const Expanded(
+          Expanded(
             child: Text(
-              'cartproductController.products[index].title',
+              '${cartproductController.products[index].title}',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
