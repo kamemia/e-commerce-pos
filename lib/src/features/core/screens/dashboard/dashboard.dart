@@ -363,7 +363,9 @@ class Dashboard extends StatelessWidget {
                     Expanded(
                       child: InkWell(
                         onTap: () {
+                          
                           Navigator.push(
+                            
                             context,
                             MaterialPageRoute(
                                 builder: (context) => const CatalogScreen()),

@@ -22,6 +22,7 @@ dependencies:
   intl_phone_field: ^3.1.0
   firebase_core: ^2.4.1
   firebase_auth: ^4.2.5
+  mpesa_flutter_plugin: ^1.6.1
   
   cloud_firestore: ^4.3.1
   line_awesome_flutter: ^2.0.0
