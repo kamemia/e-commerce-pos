@@ -1,16 +1,36 @@
+import 'dart:html';
+
+import 'package:commerce/src/api_connection/api_connection.dart';
 import 'package:commerce/src/common_widgets/form/password_field.dart';
 import 'package:commerce/src/features/authentication/controllers/signup_controller.dart';
-import 'package:commerce/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
+// import 'package:commerce/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
 import 'package:get/get.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:http/http.dart' as http;
 
 class SignUpFormWidget extends StatelessWidget {
   const SignUpFormWidget({
     Key? key,
   }) : super(key: key);
+
+  // validatUserEmail()
+  // async {
+  //   try
+  //   {
+  //     var res = await http.post(
+  //       Url.parse(API.validateEmail),
+  //       body: {
+  //         'user_email': controller.email.text.trim(),
+  //       }
+  //     );
+  //   }
+  //   catch(e)
+  //   {
+
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {

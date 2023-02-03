@@ -26,6 +26,7 @@ dependencies:
   
   cloud_firestore: ^4.3.1
   line_awesome_flutter: ^2.0.0
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:
