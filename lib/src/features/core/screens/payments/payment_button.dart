@@ -20,7 +20,7 @@ class PaymentButton extends StatelessWidget {
           await MpesaFlutterPlugin.initializeMpesaSTKPush(
               businessShortCode: "174379",
               transactionType: TransactionType.CustomerPayBillOnline,
-              amount: 10,
+              amount: controller.total,
               partyA: "0758301176",
               partyB: "174379",
               //Lipa na Mpesa Online ShortCode
