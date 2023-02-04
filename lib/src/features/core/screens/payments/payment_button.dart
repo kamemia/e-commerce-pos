@@ -6,15 +6,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mpesa_flutter_plugin/mpesa_flutter_plugin.dart';
 
-
 void main() {
   MpesaFlutterPlugin.setConsumerKey(mConsumerKey);
   MpesaFlutterPlugin.setConsumerSecret(mConsumerSecret);
 
   runApp(PaymentButton());
 }
+
 class PaymentButton extends StatelessWidget {
   final CartController controller = Get.find();
+  final Salescontroller = Get.put(SalesController());
   Future<void> lipaNaMpesa() async {
     dynamic transactionInitialisation;
     try {
@@ -58,10 +59,9 @@ class PaymentButton extends StatelessWidget {
         onPressed: () {
           lipaNaMpesa();
           final sales = SalesModel(
-            product: controller.products.values.toList(), 
-            quantity: controller.products.values.toList(), 
-            price: controller.total
-            );
+              product: '${controller.products}',
+              quantity: '${controller.products.values}',
+              price: controller.total);
           SalesController.instance.createSales(sales);
         },
         child: Text("Process Payment".toUpperCase()),

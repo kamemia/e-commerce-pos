@@ -10,7 +10,7 @@ class SalesModel {
   final String? id;
   final String? product;
   final String? quantity;
-  final String? price;
+  final double? price;
 
   const SalesModel({
     this.id,
