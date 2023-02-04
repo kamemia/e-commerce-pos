@@ -1,4 +1,6 @@
+import 'package:commerce/src/features/authentication/models/sale_model.dart';
 import 'package:commerce/src/features/core/controllers/cart_controller.dart';
+import 'package:commerce/src/features/core/controllers/sales_screen_controller.dart';
 import 'package:commerce/src/features/core/screens/payments/global_keys.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -55,6 +57,12 @@ class PaymentButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: () {
           lipaNaMpesa();
+          final sales = SalesModel(
+            product: controller.products.values.toList(), 
+            quantity: controller.products.values.toList(), 
+            price: controller.total
+            );
+          SalesController.instance.createSales(sales);
         },
         child: Text("Process Payment".toUpperCase()),
       ),

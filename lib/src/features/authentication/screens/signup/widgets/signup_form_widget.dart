@@ -1,6 +1,6 @@
-import 'dart:html';
 
-import 'package:commerce/src/api_connection/api_connection.dart';
+
+// import 'package:commerce/src/api_connection/api_connection.dart';
 import 'package:commerce/src/common_widgets/form/password_field.dart';
 import 'package:commerce/src/features/authentication/controllers/signup_controller.dart';
 // import 'package:commerce/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:commerce/src/constants/sizes.dart';
 import 'package:commerce/src/constants/text_strings.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart' as http;
+// import 'package:http/http.dart' as http;
 
 class SignUpFormWidget extends StatelessWidget {
   const SignUpFormWidget({
@@ -48,6 +48,7 @@ class SignUpFormWidget extends StatelessWidget {
               if (s!.isEmpty) {
               return "This is a required field";
               }
+              return null;
             },
               controller: controller.fullName,
               decoration: const InputDecoration(
@@ -63,6 +64,7 @@ class SignUpFormWidget extends StatelessWidget {
               if (s!.isEmpty) {
               return "This is a required field";
               }
+              return null;
             },
               controller: controller.email,
               decoration: const InputDecoration(
@@ -79,6 +81,7 @@ class SignUpFormWidget extends StatelessWidget {
               if (s!.isEmpty) {
               return "This is a required field";
               }
+              return null;
             },
               controller: controller.phoneNo,
               decoration: const InputDecoration(

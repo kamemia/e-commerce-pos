@@ -8,12 +8,11 @@ import 'package:commerce/src/features/core/screens/customer/customer_screen.dart
 import 'package:commerce/src/features/core/screens/customer/view_customers.dart';
 import 'package:commerce/src/features/core/screens/product/product_screen.dart';
 import 'package:commerce/src/features/core/screens/product/view_products.dart';
-import 'package:commerce/src/features/core/screens/sale/sales_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../discount/discount_screen.dart';
-import '../shipment/shipment_screen.dart';
+// import '../shipment/shipment_screen.dart';
 import 'widgets/user_profile_model_bottom_sheet.dart';
 
 class Dashboard extends StatelessWidget {
@@ -265,11 +264,7 @@ class Dashboard extends StatelessWidget {
                     Expanded(
                       child: InkWell(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>  const SalesScreen()),
-                          );
+                          
                         },
                         child: Container(
                           decoration: BoxDecoration(

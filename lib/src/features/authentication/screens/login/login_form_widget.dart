@@ -15,9 +15,9 @@ class LoginFormWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(LoginController());
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
     return Form(
-      key: _formKey,
+      key: formKey,
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: tFormHeight - 10),
         child: Column(
@@ -62,7 +62,7 @@ class LoginFormWidget extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  if (_formKey.currentState!.validate()) {
+                  if (formKey.currentState!.validate()) {
                     LoginController.instance.loginUser(
                         controller.email.text.trim(),
                         controller.password.text.trim());
