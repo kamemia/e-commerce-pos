@@ -17,14 +17,14 @@ class CartTotal extends StatelessWidget {
               const Text(
                 'Total',
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
                 '\Ksh ${controller.total}',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 19,
                   fontWeight: FontWeight.bold,
                 ),
               ),

@@ -61,7 +61,8 @@ class PaymentButton extends StatelessWidget {
           final sales = SalesModel(
               product: '${controller.products}',
               quantity: '${controller.products.values}',
-              price: controller.total);
+              price: controller.total
+              );
           SalesController.instance.createSales(sales);
         },
         child: Text("Process Payment".toUpperCase()),

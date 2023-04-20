@@ -23,6 +23,12 @@ dependencies:
   firebase_core: ^2.4.1
   firebase_auth: ^4.2.5
   mpesa_flutter_plugin: ^1.6.1
+  nb_utils: ^4.6.16
+  flutter_credit_card: ^3.0.4
+  barcode_widget: ^2.0.3
+  flutter_grid_button: ^2.0.0
+  percent_indicator: ^4.2.2
+  syncfusion_flutter_charts: ^20.4.41
   
   cloud_firestore: ^4.3.1
   line_awesome_flutter: ^2.0.0
@@ -45,6 +51,7 @@ flutter:
 
   uses-material-design: true
   assets:
+    - images/
     - assets/logo/
     - assets/images/
     - assets/images/splash_images/

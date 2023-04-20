@@ -35,11 +35,11 @@ class SignUpFormWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(SignUpController());
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
     return Container(
       padding: const EdgeInsets.symmetric(vertical: tFormHeight - 10),
       child: Form(
-        key: _formKey,
+        key: formKey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -114,7 +114,7 @@ class SignUpFormWidget extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  if (_formKey.currentState!.validate()) {
+                  if (formKey.currentState!.validate()) {
                     SignUpController.instance.registerUser(controller.email.text.trim(),controller.password.text.trim());
                     // SignUpController.instance
                     //     .phoneAuthentication(controller.phoneNo.text.trim());

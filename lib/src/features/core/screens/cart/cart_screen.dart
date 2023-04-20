@@ -1,9 +1,6 @@
 import 'package:commerce/src/constants/sizes.dart';
-import 'package:commerce/src/features/core/screens/cart/widgets/payment_option.dart';
-import 'package:commerce/src/features/core/screens/payments/mpesa.dart';
 import 'package:commerce/src/features/core/screens/payments/payment_button.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'widgets/widgets.dart';
 
 class CartScreen extends StatelessWidget {

@@ -1,5 +1,12 @@
 import 'package:commerce/firebase_options.dart';
 import 'package:commerce/src/features/authentication/screens/splash_screen/splash_screen.dart';
+import 'package:commerce/src/features/core/screens/cart/cart_screen.dart';
+import 'package:commerce/src/features/core/screens/cart/catalogue_screen.dart';
+import 'package:commerce/src/features/core/screens/customer/customer_screen.dart';
+import 'package:commerce/src/features/core/screens/customer/view_customers.dart';
+import 'package:commerce/src/features/core/screens/discount/discount_screen.dart';
+import 'package:commerce/src/features/core/screens/product/product_screen.dart';
+import 'package:commerce/src/features/core/screens/product/view_products.dart';
 import 'package:commerce/src/repository/authentication_repository/authentication_repository.dart';
 import 'package:commerce/src/utils/theme/theme.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -26,11 +33,20 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
       defaultTransition: Transition.leftToRightWithFade,
       transitionDuration: const Duration(milliseconds: 500),
       home: SplashScreen(),
+      routes: {
+        '/Sales': (context) => const CartScreen(),
+        '/Products': (context) => const ProductScreen(),
+        '/Discount': (context) => const DiscountScreen(),
+        '/Customer': (context) => const CustomerScreen(),
+        '/Invoice': (context) => const CatalogScreen(),
+        '/SalesList': (context) => const ViewProducts(),
+        '/Paid': (context) => const ViewCustomers(),
+      },
     );
   }
 }

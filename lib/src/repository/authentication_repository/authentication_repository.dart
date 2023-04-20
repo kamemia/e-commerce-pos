@@ -1,5 +1,7 @@
 import 'package:commerce/src/features/authentication/screens/welcome/welcome_screen.dart';
 import 'package:commerce/src/features/core/screens/dashboard/dashboard.dart';
+import 'package:commerce/src/features/core/screens/home/home.dart';
+import 'package:commerce/src/features/core/screens/home/home_screen.dart';
 import 'package:commerce/src/repository/authentication_repository/exceptions/signup_email_password_failure.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
@@ -25,7 +27,7 @@ class AuthenticationRepository extends GetxController {
   _setInitialScreen(User? user) {
     user == null
         ? Get.offAll(() => const WelcomeScreen())
-        : Get.offAll(() => const Dashboard());
+        : Get.offAll(() => const Home());
   }
 
   // Func
